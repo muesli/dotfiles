@@ -1,0 +1,24 @@
+"*":
+  core:
+    telemetryConsent: "no"
+  editor:
+    fontFamily: "Hack"
+    fontSize: 15
+    tabLength: 4
+  "exception-reporting":
+    userId: "eabc4140-6a2c-cda3-52f8-5c873acadaca"
+  "go-plus":
+    config: {}
+    test: {}
+  "platformio-ide-terminal":
+    core:
+      mapTerminalsToAutoOpen: true
+      workingDirectory: "Active File"
+    style:
+      fontFamily: "Hack"
+      theme: "solarized-dark"
+    toggles:
+      cursorBlink: false
+      runInsertedText: false
+  welcome:
+    showOnStartup: false
