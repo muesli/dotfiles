@@ -1,0 +1,5 @@
+[user]
+	email = muesli@gmail.com
+	name = Christian Muehlhaeuser
+[push]
+	default = simple
