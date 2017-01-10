@@ -5,9 +5,11 @@
 #
 #     For license see LICENSE
 #
+set -e
+pwd="`pwd`"
 
 # Install packages
-#./system/pkgs_install.sh
+./system/pkgs_install.sh
 
 function linkTo {
     if [ -f "$2" ]
@@ -25,3 +27,12 @@ linkTo "git/gitconfig" "$HOME/.gitconfig"
 
 # Setup Atom
 linkTo "atom/config.cson" "$HOME/.atom/config.cson"
+
+# Install oh-my-zsh
+mkdir -p "$HOME/Sources"
+cd "$HOME/Sources"
+if [ ! -d "oh-my-zsh" ]
+then
+    git clone https://github.com/muesli/oh-my-zsh.git
+fi
+cd "$pwd"
