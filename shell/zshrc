@@ -87,5 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # env vars
 export GOPATH=~/Sources/go
 export EDITOR=joe
+export PATH=~/bin:$PATH
+alias rm="~/bin/trash"
 
 mcd () { mkdir "$1" && cd "$1" }
