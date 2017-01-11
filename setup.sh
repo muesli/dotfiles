@@ -22,6 +22,9 @@ function linkTo {
 # Setup zsh
 linkTo "shell/zshrc" "$HOME/.zshrc"
 
+# Setup elvish
+linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
+
 # Setup git
 linkTo "git/gitconfig" "$HOME/.gitconfig"
 
@@ -35,4 +38,5 @@ if [ ! -d "oh-my-zsh" ]
 then
     git clone https://github.com/muesli/oh-my-zsh.git
 fi
+
 cd "$pwd"
