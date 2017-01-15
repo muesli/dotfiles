@@ -19,6 +19,7 @@ function installYaourt {
     cd "$pwd"
 }
 
+sudo pacman -Syu
 sudo pacman -S --noconfirm --needed base-devel diffutils wget
 
 which yaourt >/dev/null || installYaourt
