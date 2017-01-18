@@ -19,6 +19,9 @@ function linkTo {
     ln -s "`pwd`/$1" "$2"
 }
 
+# Setup profile
+linkTo "shell/profile" "$HOME/.profile"
+
 # Setup zsh
 linkTo "shell/zshrc" "$HOME/.zshrc"
 
