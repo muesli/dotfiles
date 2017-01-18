@@ -34,3 +34,6 @@ yaourt -S --needed \
 
 # install development packages
 yaourt -S --needed atom git go go-tools httpie pngcrush
+
+# install elvish
+go get github.com/elves/elvish
