@@ -85,3 +85,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 mcd () { mkdir "$1" && cd "$1" }
+
+if [ -r "$HOME/.profile" ]
+then
+    source "$HOME/.profile"
+fi
+
+if [ -x "$GOPATH/bin/elvish" ]
+then
+    $GOPATH/bin/elvish
+    exit
+fi

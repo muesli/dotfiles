@@ -16,11 +16,6 @@ le:binding[navigation][l]=$le:&nav-right
 le:binding[navigation][j]=$le:&nav-down
 le:binding[navigation][k]=$le:&nav-up
 
-# env
-E:GOPATH=~/Sources/go
-E:EDITOR=joe
-paths=[$E:HOME/bin $E:GOPATH/bin $@paths]
-
 #E:LANG=en_US.UTF-8
 #E:LANGUAGE=en_US.UTF-8
 E:LS_COLORS=[(splits &sep="'" (dircolors | head -1))][1]
@@ -28,5 +23,7 @@ E:LS_COLORS=[(splits &sep="'" (dircolors | head -1))][1]
 #le:completer['']={ e:bash ~/.elvish/get-completion.bash $@args }
 #if ==s 'root' `whoami`; then put ' # '; else put ' $ '; fi
 
-le:prompt={ le:styled (put "╭─ ") 97; le:styled (tilde-abbr $pwd) 93; le:styled (put " (") 90; le:styled (put `whoami`) 92; le:styled (put "@") 90; le:styled (put `hostname`) 94; le:styled (put ")") 90; le:styled (put "\n╰◉ ") 97 }
-le:rprompt={ le:styled (put "(") 90; le:styled (put `date +%H:%M:%S`) 90; le:styled (put ")") 90 }
+le:prompt={ le:styled (put "╭─ ") white; le:styled (tilde-abbr $pwd) "bold;lightyellow"; le:styled (put " (") gray; le:styled (put `whoami`) "lightgreen"; le:styled (put "@") gray; le:styled (put `hostname`) "lightblue"; le:styled (put ")") gray; le:styled (put "\n╰◉ ") white }
+le:rprompt={ le:styled (put "(") gray; le:styled (put `date +%H:%M:%S`) "gray"; le:styled (put ")") gray }
+
+le:binding[insert][Down]={ }
