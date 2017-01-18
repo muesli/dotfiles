@@ -8,6 +8,12 @@
 set -e
 pwd="`pwd`"
 
+# create required dirs
+mkdir -p "$HOME/Sources/go"
+
+# source .profile so we got correct env-vars for setup
+source "shell/profile"
+
 # Install packages
 ./system/pkgs_install.sh
 
@@ -35,7 +41,6 @@ linkTo "git/gitconfig" "$HOME/.gitconfig"
 linkTo "atom/config.cson" "$HOME/.atom/config.cson"
 
 # Install oh-my-zsh
-mkdir -p "$HOME/Sources"
 cd "$HOME/Sources"
 if [ ! -d "oh-my-zsh" ]
 then
