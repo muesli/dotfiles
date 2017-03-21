@@ -25,7 +25,11 @@ sudo pacman -S --noconfirm --needed base-devel diffutils wget
 which yaourt >/dev/null || installYaourt
 
 # install go-to packages
-yaourt -S --needed coreutils hdparm htop joe ncdu tmux traceroute unrar unzip which zsh
+yaourt -S --needed coreutils hdparm htop joe ncdu openssh tmux traceroute \
+    unrar unzip which zsh
+
+# install xorg
+yaourt -S --needed xorg-server
 
 # install desktop packages
 yaourt -S --needed \
