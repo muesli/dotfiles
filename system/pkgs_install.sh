@@ -33,8 +33,8 @@ yaourt -S --needed xorg-server
 
 # install desktop packages
 yaourt -S --needed \
-    chromium-widevine dolphin gwenview kate kcalc kdevelop konversation \
-    kwrite plasma-meta trash-cli vlc
+    chromium-widevine dolphin gwenview kate kcalc kdevelop konsole \
+    konversation kwrite plasma-meta trash-cli vlc yakuake
 
 # install development packages
 yaourt -S --needed atom git go go-tools httpie pngcrush
