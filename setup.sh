@@ -18,8 +18,11 @@ source "shell/profile"
 ./packages/base.sh
 ./packages/xorg.sh
 ./packages/desktop.sh
-./packages/bluetooth.sh
 ./packages/elvish.sh
+
+# Install drivers
+#./packages/drivers/intel.sh
+./packages/drivers/bluetooth.sh
 
 function linkTo {
     if [ -f "$2" ]
@@ -32,16 +35,18 @@ function linkTo {
 # Setup profile
 linkTo "shell/profile" "$HOME/.profile"
 
+# Setup git
+linkTo "git/gitconfig" "$HOME/.gitconfig"
+
 # Setup zsh
 linkTo "shell/zshrc" "$HOME/.zshrc"
 
 # Setup elvish
+mkdir -p "$HOME/.elvish"
 linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
 
-# Setup git
-linkTo "git/gitconfig" "$HOME/.gitconfig"
-
 # Setup Atom
+mkdir -p "$HOME/.atom"
 linkTo "atom/config.cson" "$HOME/.atom/config.cson"
 
 # Install oh-my-zsh

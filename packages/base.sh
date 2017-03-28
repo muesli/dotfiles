@@ -26,5 +26,5 @@ which yaourt >/dev/null || installYaourt
 
 # install go-to packages
 yaourt -S --needed \
-    coreutils hdparm htop iotop joe ncdu openssh tmux traceroute unrar unzip \
-    which zsh
+    coreutils dosfstools hdparm htop iotop joe ncdu openssh tmux traceroute \
+    unrar unzip which zsh
