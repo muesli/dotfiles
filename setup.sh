@@ -15,7 +15,11 @@ mkdir -p "$HOME/Sources/go"
 source "shell/profile"
 
 # Install packages
-./system/pkgs_install.sh
+./packages/base.sh
+./packages/xorg.sh
+./packages/desktop.sh
+./packages/bluetooth.sh
+./packages/elvish.sh
 
 function linkTo {
     if [ -f "$2" ]
