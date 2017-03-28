@@ -18,6 +18,7 @@ source "shell/profile"
 ./packages/base.sh
 ./packages/xorg.sh
 ./packages/desktop.sh
+./packages/virtualbox.sh
 ./packages/elvish.sh
 
 # Install drivers
