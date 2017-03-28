@@ -38,7 +38,7 @@ yaourt -S --needed \
     konversation kwrite phonon-qt5-vlc plasma-meta trash-cli vlc yakuake
 
 # install bluetooth support
-yaourt -S --needed bluez-firmware bluez-utils pulseaudio-bluetooth
+yaourt -S --needed bluez-firmware bluez-utils pulseaudio-alsa pulseaudio-bluetooth
 
 # install development packages
 yaourt -S --needed atom git go go-tools httpie pngcrush

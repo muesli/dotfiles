@@ -12,3 +12,5 @@ $ ./setup.sh
 Limit journal size: https://wiki.archlinux.org/index.php/Systemd#Journal_size_limit
 
 Configure Avahi/mDNS: https://wiki.archlinux.org/index.php/avahi
+
+Setup Pulseaudio auto connection: https://wiki.archlinux.org/index.php/Bluetooth_headset#Setting_up_auto_connection
