@@ -1,4 +1,3 @@
 #!/bin/bash
 
-# install VirtualBox
-yaourt -S --needed virtualbox virtualbox-host-modules-arch
+PACKAGES=("${PACKAGES[@]}" "virtualbox" "virtualbox-host-modules-arch")

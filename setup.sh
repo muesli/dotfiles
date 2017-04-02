@@ -14,10 +14,7 @@ mkdir -p "$HOME/Sources/go"
 source "shell/profile"
 
 # Install packages
-./packages/base.sh
-./packages/xorg.sh
-./packages/desktop.sh
-./packages/virtualbox.sh
+./packages/packages.sh
 ./packages/elvish.sh
 
 # Install drivers
