@@ -38,6 +38,9 @@ linkTo "git/gitconfig" "$HOME/.gitconfig"
 # Setup zsh
 linkTo "shell/zshrc" "$HOME/.zshrc"
 
+# Setup joe
+linkTo "joe/joerc" "$HOME/.joerc"
+
 # Setup elvish
 mkdir -p "$HOME/.elvish"
 linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
