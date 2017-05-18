@@ -9,12 +9,12 @@ fn glog { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 le:binding[insert][Ctrl+A]=$le:&move-dot-sol
 le:binding[insert][Ctrl+E]=$le:&move-dot-eol
 le:binding[insert][Ctrl+L]={ clear > /dev/tty }
-le:binding[insert][Ctrl+/]=$le:&start-location
+le:binding[insert][Ctrl+/]=$le:loc:&start
 le:binding[insert][Alt+Up]={ cd .. }
-le:binding[navigation][h]=$le:&nav-left
-le:binding[navigation][l]=$le:&nav-right
-le:binding[navigation][j]=$le:&nav-down
-le:binding[navigation][k]=$le:&nav-up
+#le:binding[navigation][h]=$le:nav:&left
+#le:binding[navigation][l]=$le:nav:&right
+#le:binding[navigation][j]=$le:nav:&down
+#le:binding[navigation][k]=$le:nav:&up
 
 #E:LANG=en_US.UTF-8
 #E:LANGUAGE=en_US.UTF-8
