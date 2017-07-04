@@ -5,25 +5,25 @@ fn grep { e:grep --color $@ }
 fn glog { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@ }
 
 # bind
-#le:binding[insert][Alt+Backspace]=$le:&kill-small-word-left
-le:binding[insert][Ctrl+A]=$le:&move-dot-sol
-le:binding[insert][Ctrl+E]=$le:&move-dot-eol
-le:binding[insert][Ctrl+L]={ clear > /dev/tty }
-le:binding[insert][Ctrl+/]=$le:loc:&start
-le:binding[insert][Alt+Up]={ cd .. }
-#le:binding[navigation][h]=$le:nav:&left
-#le:binding[navigation][l]=$le:nav:&right
-#le:binding[navigation][j]=$le:nav:&down
-#le:binding[navigation][k]=$le:nav:&up
+#edit:binding[insert][Alt+Backspace]=$edit:&kill-small-word-left
+edit:binding[insert][Ctrl+A]=$edit:&move-dot-sol
+edit:binding[insert][Ctrl+E]=$edit:&move-dot-eol
+edit:binding[insert][Ctrl+L]={ clear > /dev/tty }
+edit:binding[insert][Ctrl+/]=$edit:loc:&start
+edit:binding[insert][Alt+Up]={ cd .. }
+#edit:binding[navigation][h]=$edit:nav:&left
+#edit:binding[navigation][l]=$edit:nav:&right
+#edit:binding[navigation][j]=$edit:nav:&down
+#edit:binding[navigation][k]=$edit:nav:&up
 
 #E:LANG=en_US.UTF-8
 #E:LANGUAGE=en_US.UTF-8
 E:LS_COLORS=[(splits &sep="'" (dircolors | head -1))][1]
 
-#le:completer['']={ e:bash ~/.elvish/get-completion.bash $@args }
+#edit:completer['']={ e:bash ~/.elvish/get-completion.bash $@args }
 #if ==s 'root' `whoami`; then put ' # '; else put ' $ '; fi
 
-le:prompt={ le:styled (put "╭─ ") white; le:styled (tilde-abbr $pwd) "bold;lightyellow"; le:styled (put " (") gray; le:styled (put `whoami`) "lightgreen"; le:styled (put "@") gray; le:styled (put `hostname`) "lightblue"; le:styled (put ")") gray; le:styled (put "\n╰◉ ") white }
-le:rprompt={ le:styled (put "(") gray; le:styled (put `date +%H:%M:%S`) "gray"; le:styled (put ")") gray }
+edit:prompt={ edit:styled (put "╭─ ") white; edit:styled (tilde-abbr $pwd) "bold;lightyellow"; edit:styled (put " (") gray; edit:styled (put `whoami`) "lightgreen"; edit:styled (put "@") gray; edit:styled (put `hostname`) "lightblue"; edit:styled (put ")") gray; edit:styled (put "\n╰◉ ") white }
+edit:rprompt={ edit:styled (put "(") gray; edit:styled (put `date +%H:%M:%S`) "gray"; edit:styled (put ")") gray }
 
-le:binding[insert][Down]={ }
+edit:binding[insert][Down]={ }
