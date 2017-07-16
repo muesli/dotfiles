@@ -5,17 +5,16 @@ fn grep { e:grep --color $@ }
 fn glog { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@ }
 
 # bind
-#edit:binding[insert][Alt+Backspace]=$edit:&kill-small-word-left
+#edit:insert:binding[Alt+Backspace]=$edit:&kill-small-word-left
 edit:insert:binding[Ctrl+A]=$edit:&move-dot-sol
 edit:insert:binding[Ctrl+E]=$edit:&move-dot-eol
-#edit:binding[insert][Ctrl+H]=$edit:location:&start
 edit:insert:binding[Ctrl+L]={ clear > /dev/tty }
 edit:insert:binding[Ctrl+/]=$edit:location:&start
 edit:insert:binding[Alt+Up]={ cd .. }
-#edit:binding[navigation][h]=$edit:nav:&left
-#edit:binding[navigation][l]=$edit:nav:&right
-#edit:binding[navigation][j]=$edit:nav:&down
-#edit:binding[navigation][k]=$edit:nav:&up
+#edit:navigation:binding[h]=$edit:nav:&left
+#edit:navigation:binding[l]=$edit:nav:&right
+#edit:navigation:binding[j]=$edit:nav:&down
+#edit:navigation:binding[k]=$edit:nav:&up
 
 #E:LANG=en_US.UTF-8
 #E:LANGUAGE=en_US.UTF-8
