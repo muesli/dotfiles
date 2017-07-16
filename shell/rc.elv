@@ -6,11 +6,12 @@ fn glog { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 
 # bind
 #edit:binding[insert][Alt+Backspace]=$edit:&kill-small-word-left
-edit:binding[insert][Ctrl+A]=$edit:&move-dot-sol
-edit:binding[insert][Ctrl+E]=$edit:&move-dot-eol
-edit:binding[insert][Ctrl+L]={ clear > /dev/tty }
-edit:binding[insert][Ctrl+/]=$edit:loc:&start
-edit:binding[insert][Alt+Up]={ cd .. }
+edit:insert:binding[Ctrl+A]=$edit:&move-dot-sol
+edit:insert:binding[Ctrl+E]=$edit:&move-dot-eol
+#edit:binding[insert][Ctrl+H]=$edit:location:&start
+edit:insert:binding[Ctrl+L]={ clear > /dev/tty }
+edit:insert:binding[Ctrl+/]=$edit:location:&start
+edit:insert:binding[Alt+Up]={ cd .. }
 #edit:binding[navigation][h]=$edit:nav:&left
 #edit:binding[navigation][l]=$edit:nav:&right
 #edit:binding[navigation][j]=$edit:nav:&down
@@ -26,4 +27,4 @@ E:LS_COLORS=[(splits &sep="'" (dircolors | head -1))][1]
 edit:prompt={ edit:styled (put "╭─ ") white; edit:styled (tilde-abbr $pwd) "bold;lightyellow"; edit:styled (put " (") gray; edit:styled (put `whoami`) "lightgreen"; edit:styled (put "@") gray; edit:styled (put `hostname`) "lightblue"; edit:styled (put ")") gray; edit:styled (put "\n╰◉ ") white }
 edit:rprompt={ edit:styled (put "(") gray; edit:styled (put `date +%H:%M:%S`) "gray"; edit:styled (put ")") gray }
 
-edit:binding[insert][Down]={ }
+edit:insert:binding[Down]={ }
