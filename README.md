@@ -26,6 +26,8 @@ Enable SDDM: ```systemctl enable sddm```
 Setup GPG & SSH keys
 
 # System Tweaks
+Enable smartd: https://wiki.archlinux.org/index.php/S.M.A.R.T.
+
 Limit journal size: https://wiki.archlinux.org/index.php/Systemd#Journal_size_limit
 
 Configure Avahi/mDNS: https://wiki.archlinux.org/index.php/avahi
