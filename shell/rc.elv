@@ -1,8 +1,8 @@
 # aliases
-fn ls { e:ls --color=auto $@ }
-fn l { ls -alh $@ }
-fn grep { e:grep --color $@ }
-fn glog { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@ }
+fn ls [@a]{ e:ls --color=auto $@a }
+fn l [@a]{ ls -alh $@a }
+fn grep [@a]{ e:grep --color $@a }
+fn glog [@a]{ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@a }
 
 # bind
 #edit:insert:binding[Alt+Backspace]=$edit:&kill-small-word-left
@@ -18,7 +18,7 @@ edit:insert:binding[Alt+Up]={ cd .. }
 
 #E:LANG=en_US.UTF-8
 #E:LANGUAGE=en_US.UTF-8
-E:LS_COLORS=[(splits &sep="'" (dircolors | head -1))][1]
+E:LS_COLORS=[(splits "'" (dircolors | head -1))][1]
 
 #edit:completer['']={ e:bash ~/.elvish/get-completion.bash $@args }
 #if ==s 'root' `whoami`; then put ' # '; else put ' $ '; fi
