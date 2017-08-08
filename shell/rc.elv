@@ -1,4 +1,5 @@
 # aliases
+fn e [@a]{ $E:EDITOR $@a }
 fn ls [@a]{ e:ls --color=auto $@a }
 fn l [@a]{ ls -alh $@a }
 fn grep [@a]{ e:grep --color $@a }
