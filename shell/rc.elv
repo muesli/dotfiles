@@ -27,7 +27,7 @@ E:QT_PKG_CONFIG=true
 E:PATH=~/bin:$E:GOPATH/bin:$E:PATH
 
 #edit:completer['']={ e:bash ~/.elvish/get-completion.bash $@args }
-#if ==s 'root' `whoami`; then put ' # '; else put ' $ '; fi
+#if == s 'root' `whoami`; then put ' # '; else put ' $ '; fi
 
-edit:prompt={ edit:styled (put "╭─ ") white; edit:styled (tilde-abbr $pwd) "bold;lightyellow"; edit:styled (put " (") gray; edit:styled (put `whoami`) "lightgreen"; edit:styled (put "@") gray; edit:styled (put `hostname`) "lightblue"; edit:styled (put ")") gray; edit:styled (put "\n╰◉ ") white }
-edit:rprompt={ edit:styled (put "(") gray; edit:styled (put `date +%H:%M:%S`) "gray"; edit:styled (put ")") gray }
+edit:prompt={ edit:styled (put "╭─ ") white; edit:styled (tilde-abbr $pwd) "bold;lightyellow"; edit:styled (put " (") gray; edit:styled (put (whoami)) "lightgreen"; edit:styled (put "@") gray; edit:styled (put (hostname)) "lightblue"; edit:styled (put ")") gray; edit:styled (put "\n╰◉ ") white }
+edit:rprompt={ edit:styled (put "(") gray; edit:styled (put (date +%H:%M:%S)) "gray"; edit:styled (put ")") gray }
