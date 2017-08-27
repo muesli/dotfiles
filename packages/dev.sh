@@ -9,4 +9,4 @@ PACKAGES=("${PACKAGES[@]}" "atom" "cmake" "extra-cmake-modules" "git" "go" \
     "qt5-networkauth" "qt5-multimedia" "qt5-location" "qt5-imageformats" \
     "qt5-graphicaleffects" "qt5-gamepad" "qt5-doc" "qt5-declarative" \
     "qt5-datavis3d" "qt5-connectivity" "qt5-charts" "qt5-canvas3d" "qt5-3d" \
-    "visual-studio-code-oss")
+    "qt5-scxml" "visual-studio-code-oss")
