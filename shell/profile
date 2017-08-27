@@ -2,3 +2,5 @@ export GOPATH=$HOME/Sources/go
 export EDITOR=micro
 export QT_PKG_CONFIG=true
 export PATH=$HOME/bin:$GOPATH/bin:$PATH
+
+alias pass=gopass
