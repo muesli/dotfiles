@@ -1,5 +1,6 @@
 [user]
 	email = muesli@gmail.com
 	name = Christian Muehlhaeuser
+	signingkey = BA4CF857DD4117E9
 [push]
 	default = simple
