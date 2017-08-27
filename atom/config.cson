@@ -3,7 +3,8 @@
     telemetryConsent: "no"
   editor:
     fontFamily: "Hack"
-    fontSize: 15
+    fontSize: 16
+    preferredLineLength: 120
     tabLength: 4
   "exception-reporting":
     userId: "eabc4140-6a2c-cda3-52f8-5c873acadaca"
