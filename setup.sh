@@ -49,6 +49,10 @@ linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
 mkdir -p "$HOME/.atom"
 linkTo "atom/config.cson" "$HOME/.atom/config.cson"
 
+# Setup Code-OSS
+mkdir -p "$HOME/.config/Code - OSS/User"
+linkTo "code-oss/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
+
 # Install oh-my-zsh
 cd "$HOME/Sources"
 if [ ! -d "oh-my-zsh" ]
