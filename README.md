@@ -31,3 +31,5 @@ Enable smartd: https://wiki.archlinux.org/index.php/S.M.A.R.T.
 Limit journal size: https://wiki.archlinux.org/index.php/Systemd#Journal_size_limit
 
 Configure Avahi/mDNS: https://wiki.archlinux.org/index.php/avahi
+
+Install TLP: https://wiki.archlinux.org/index.php/TLP
