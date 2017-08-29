@@ -7,4 +7,4 @@
 set -e
 pwd="`pwd`"
 
-brew install micro qt5 watch
+brew install go micro qt5 watch
