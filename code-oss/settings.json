@@ -1,9 +1,12 @@
 {
     "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 16,
-    "window.zoomLevel": 2,
+    "editor.formatOnSave": true,
+    "window.zoomLevel": 1,
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Monokai",
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
     "[go]": {
         "gopath": "/home/muesli/Sources/go"
     }
