@@ -5,3 +5,4 @@ export PATH=$HOME/bin:$GOPATH/bin:$PATH
 
 alias pass=gopass
 alias e=micro
+alias code=code-oss
