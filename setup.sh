@@ -44,6 +44,7 @@ linkTo "joe/joerc" "$HOME/.joerc"
 # Setup elvish
 mkdir -p "$HOME/.elvish"
 linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
+linkTo "shell/elvish/lib" "$HOME/.elvish/lib"
 
 # Setup Atom
 mkdir -p "$HOME/.atom"
