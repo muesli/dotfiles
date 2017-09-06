@@ -4,6 +4,8 @@
 #
 #     For license see LICENSE
 #
+. setup_helpers.sh
+
 set -e
 pwd="`pwd`"
 

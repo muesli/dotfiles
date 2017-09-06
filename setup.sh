@@ -4,6 +4,8 @@
 #
 #     For license see LICENSE
 #
+. setup_helpers.sh
+
 set -e
 pwd="`pwd`"
 
@@ -20,14 +22,6 @@ source "shell/profile"
 # Install drivers
 #./packages/drivers/intel.sh
 ./packages/drivers/bluetooth.sh
-
-function linkTo {
-    if [ -f "$2" ]
-    then
-        mv "$2" "$2.before.dotfiles"
-    fi
-    ln -s "`pwd`/$1" "$2"
-}
 
 # Setup profile
 linkTo "shell/profile" "$HOME/.profile"
