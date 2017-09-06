@@ -7,6 +7,5 @@
 . setup_helpers.sh
 
 set -e
-pwd="`pwd`"
 
 brew install go micro qt5 watch

@@ -4,10 +4,10 @@
 #
 #     For license see LICENSE
 #
-. setup_helpers.sh
-
 set -e
-pwd="`pwd`"
+pwd="$(pwd)"
+
+. setup_helpers.sh
 
 # create required dirs
 mkdir -p "$HOME/Sources/go"
@@ -15,13 +15,19 @@ mkdir -p "$HOME/Sources/go"
 # source .profile so we got correct env-vars for setup
 source "shell/profile"
 
-# Install packages
-./packages/packages.sh
-./packages/elvish.sh
+if [[ "$OSTYPE" == "linux"* ]]; then
+        # Linux
+        echo "Running additional setup for Linux..."
+        ./setup_linux.sh
 
-# Install drivers
-#./packages/drivers/intel.sh
-./packages/drivers/bluetooth.sh
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+        # Mac OSX
+        echo "Running additional setup for macOS..."
+        ./setup_osx.sh
+else
+        # Unknown
+        echo "Sorry, but additional setup for '$OSTYPE' is not supported (yet)!"
+fi
 
 # Setup profile
 linkTo "shell/profile" "$HOME/.profile"
@@ -39,20 +45,5 @@ linkTo "joe/joerc" "$HOME/.joerc"
 mkdir -p "$HOME/.elvish"
 linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
 linkTo "shell/elvish/lib" "$HOME/.elvish/lib"
-
-# Setup Atom
-mkdir -p "$HOME/.atom"
-linkTo "atom/config.cson" "$HOME/.atom/config.cson"
-
-# Setup Code-OSS
-mkdir -p "$HOME/.config/Code - OSS/User"
-linkTo "code-oss/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
-
-# Install oh-my-zsh
-cd "$HOME/Sources"
-if [ ! -d "oh-my-zsh" ]
-then
-    git clone https://github.com/muesli/oh-my-zsh.git
-fi
 
 cd "$pwd"
