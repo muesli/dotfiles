@@ -40,10 +40,10 @@ glyph = [
 # Styling for each built-in segment. The value must be a valid argument to `edit:styled`
 segment_style = [
 	&chain= default
-        &su= red
-        &cache= yellow
-        &dir= lightyellow
-        &git_branch= white
+	&su= red
+	&cache= yellow
+	&dir= lightyellow
+	&git_branch= white
 	&git_dirty= yellow
 	&timestamp= gray
 ]
@@ -61,7 +61,7 @@ root_id = 0
 # This improves typing speed sometimes (e.g. in large git repos when you have the
 # git segments enabled) but may cause prompt refresh problems sometimes until
 # you press Enter after a directory change or some other change.
-cache_chain = $true
+cache_chain = $false
 
 # Threshold in milliseconds for auto-enabling prompt caching
 auto_cache_threshold_ms = 100
@@ -101,21 +101,26 @@ fn prompt_segment [style @texts]{
 	-colored $text $style
 }
 
-# Check if the current directory is a git repo
-fn is_git_repo {
-	put ?(git rev-parse --is-inside-work-tree 2>/dev/null)
-}
-
 # Return the git branch name of the current directory
 fn -git_branch_name {
-	if (is_git_repo) {
-		git rev-parse --abbrev-ref HEAD 2> /dev/null
-	}
+  out = ""
+  err = ?(out = (git branch 2>/dev/null | eawk [line @f]{
+        if (eq $f[0] "*") {
+          if (and (> (count $f) 2) (eq $f[2] "detached")) {
+            replaces ')' '' $f[4]
+          } else {
+            echo $f[1]
+          }
+        }
+  }))
+  put $out
 }
 
 # Return whether the current git repo is "dirty" (modified in any way)
 fn -git_is_dirty {
-	and (is_git_repo) (not (eq "" (git ls-files --exclude-standard -om)))
+  out = []
+  err = ?(out = [(git status -s --ignore-submodules=dirty 2>/dev/null)])
+  > (count $out) 0
 }
 
 # Return the current directory, shortened according to `$prompt_pwd_dir_length`
@@ -149,14 +154,15 @@ fn segment_dir {
 }
 
 fn segment_git_branch {
-	if (is_git_repo) {
-		prompt_segment $segment_style[git_branch] $glyph[git_branch] (-git_branch_name)
-	}
+  branch = (-git_branch_name)
+  if (not-eq $branch "") {
+	  prompt_segment $segment_style[git_branch] $glyph[git_branch] $branch
+  }
 }
 
 fn segment_git_dirty {
-	if (and (is_git_repo) (-git_is_dirty)) {
-		prompt_segment $segment_style[git_dirty] $glyph[git_dirty]
+	if (-git_is_dirty) {
+	  prompt_segment $segment_style[git_dirty] $glyph[git_dirty]
 	}
 }
 
@@ -270,7 +276,7 @@ fn rprompt [@skipcheck]{
 fn cache_prompts [@skipcheck]{
   time = (-time {
       cached_prompt = [(prompt $@skipcheck)]
-      cached_rprompt = [(rprompt $@skipcheck)] 
+      cached_rprompt = [(rprompt $@skipcheck)]
   })
   if (== (count $skipcheck) 0) {
     -check_time_for_disabling_caching $time
