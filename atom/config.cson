@@ -9,7 +9,8 @@
   "exception-reporting":
     userId: "eabc4140-6a2c-cda3-52f8-5c873acadaca"
   "go-plus":
-    config: {}
+    config:
+      gopath: "/home/muesli/Sources/go"
     test: {}
   "platformio-ide-terminal":
     core:
