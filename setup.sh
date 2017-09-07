@@ -31,6 +31,13 @@ else
         exit 1
 fi
 
+# Install oh-my-zsh
+cd "$HOME/Sources"
+if [ ! -d "oh-my-zsh" ]
+then
+    git clone https://github.com/muesli/oh-my-zsh.git
+fi
+
 ./packages/elvish.sh
 
 # Setup profile
