@@ -8,7 +8,6 @@ set -e
 
 # Install packages
 ./packages/arch/packages.sh
-./packages/arch/elvish.sh
 
 # Install drivers
 #./packages/arch/drivers/intel.sh

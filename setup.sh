@@ -19,20 +19,19 @@ if [[ "$OSTYPE" == "linux"* ]]; then
         # Linux
         echo "Running additional setup for Linux..."
         ./setup_linux.sh
-
-        . /etc/os-release
-        OSID="$ID"
+        OSID="linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         # Mac OSX
         echo "Running additional setup for macOS..."
         ./setup_osx.sh
-
         OSID="macos"
 else
         # Unknown
         echo "Sorry, but setup for '$OSTYPE' is not supported (yet)!"
         exit 1
 fi
+
+./packages/elvish.sh
 
 # Setup profile
 linkTo "shell/$OSID/profile" "$HOME/.profile"
