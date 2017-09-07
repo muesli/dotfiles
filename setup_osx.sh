@@ -4,8 +4,7 @@
 #
 #     For license see LICENSE
 #
-. setup_helpers.sh
-
 set -e
 
-brew install go micro qt5 watch
+# Install packages
+./packages/macos/packages.sh
