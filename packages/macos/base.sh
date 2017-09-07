@@ -1,3 +1,3 @@
 #!/bin/bash
 
-PACKAGES=("${PACKAGES[@]}" "micro" "watch")
+PACKAGES=("${PACKAGES[@]}" "joe" "micro" "watch")
