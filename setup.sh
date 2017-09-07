@@ -37,6 +37,7 @@ if [ ! -d "oh-my-zsh" ]
 then
     git clone https://github.com/muesli/oh-my-zsh.git
 fi
+cd "$pwd"
 
 ./packages/elvish.sh
 
