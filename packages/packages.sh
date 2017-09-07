@@ -19,6 +19,8 @@ function installYay {
 function installYaourt {
     pwd="$(pwd)"
 
+    sudo pacman -S --noconfirm --needed base-devel diffutils wget
+
     mkdir /tmp/yaourt
     cd /tmp/yaourt
     curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz
@@ -39,7 +41,6 @@ function installYaourt {
 sudo pacman -Syu
 
 # Install yaourt
-sudo pacman -S --noconfirm --needed base-devel diffutils wget
 which yaourt >/dev/null || installYaourt
 
 # Install packages
