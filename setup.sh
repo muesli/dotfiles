@@ -20,17 +20,22 @@ if [[ "$OSTYPE" == "linux"* ]]; then
         echo "Running additional setup for Linux..."
         ./setup_linux.sh
 
+        . /etc/os-release
+        OSID="$ID"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         # Mac OSX
         echo "Running additional setup for macOS..."
         ./setup_osx.sh
+
+        OSID="macos"
 else
         # Unknown
-        echo "Sorry, but additional setup for '$OSTYPE' is not supported (yet)!"
+        echo "Sorry, but setup for '$OSTYPE' is not supported (yet)!"
+        exit 1
 fi
 
 # Setup profile
-linkTo "shell/profile" "$HOME/.profile"
+linkTo "shell/$OSID/profile" "$HOME/.profile"
 
 # Setup git
 linkTo "git/gitconfig" "$HOME/.gitconfig"

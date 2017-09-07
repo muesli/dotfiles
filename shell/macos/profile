@@ -1,0 +1,7 @@
+export GOPATH=$HOME/Sources/go
+export EDITOR=micro
+export QT_HOMEBREW=true
+export PATH=/usr/local/bin:$HOME/bin:$GOPATH/bin:$PATH
+
+alias pass=gopass
+alias e=micro
