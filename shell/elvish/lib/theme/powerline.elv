@@ -15,11 +15,12 @@
 # segments will be automatically linked by `$theme:powerline:glyph[chain]`. Each element can be any
 # of the following:
 #
-# - The name of one of the built-in segments. Available segments: `newline` `user` `host` `arrow` `timestamp` `su` `dir` `git_branch` `git_dirty`
+# - The name of one of the built-in segments. Available segments:
+#     `newline` `user` `host` `arrow` `timestamp` `su` `dir` `git_branch` `git_dirty`
 # - A string or the output of `edit:styled`, which will be displayed as-is.
 # - A lambda, which will be called and its output displayed
-# - The output of a call to `theme:powerline:segment <style> <strings>`, which returns a "proper" segment, enclosed in
-#   square brackets and styled as requested.
+# - The output of a call to `theme:powerline:segment <style> <strings>`, which returns a "proper"
+#   segment, enclosed in square brackets and styled as requested.
 #
 
 # Default values (all can be configured by assigning to the appropriate variable):
