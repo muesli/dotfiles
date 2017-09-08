@@ -24,17 +24,18 @@
 # Default values (all can be configured by assigning to the appropriate variable):
 
 # Configurable prompt segments for each prompt
-prompt_segments = [ su dir git_branch git_dirty arrow ]
+prompt_segments = [ prefix su dir git_branch git_dirty userhost arrow ]
 rprompt_segments = [ timestamp ]
 
 # Glyphs to be used in the prompt
 glyph = [
-	&prompt= ">"
+	&prefix= "╭─"
+	&prompt= "\n╰◉"
 	&git_branch= "⎇"
 	&git_dirty= "±"
 	&su= "⚡"
   &cache= "∼"
-	&chain= "─"
+	&chain= " "
 ]
 
 # Styling for each built-in segment. The value must be a valid argument to `edit:styled`
@@ -153,6 +154,14 @@ fn segment_dir {
 	prompt_segment $segment_style[dir] (-prompt_pwd)
 }
 
+fn segment_userhost {
+  edit:styled (put "(") gray;
+  edit:styled (put (whoami)) "lightgreen";
+  edit:styled (put "@") gray;
+  edit:styled (put (hostname)) "lightblue";
+  edit:styled (put ")") gray;
+}
+
 fn segment_git_branch {
   branch = (-git_branch_name)
   if (not-eq $branch "") {
@@ -166,8 +175,12 @@ fn segment_git_dirty {
 	}
 }
 
+fn segment_prefix {
+	edit:styled $glyph[prefix] white
+}
+
 fn segment_arrow {
-	edit:styled $glyph[prompt]" " green
+	edit:styled $glyph[prompt]" " white
 }
 
 fn segment_timestamp {
@@ -177,10 +190,12 @@ fn segment_timestamp {
 # List of built-in segments
 segment = [
 	&su= $&segment_su
-  &cache= $&segment_cache
+	&cache= $&segment_cache
 	&dir= $&segment_dir
+	&userhost= $&segment_userhost
 	&git_branch= $&segment_git_branch
 	&git_dirty= $&segment_git_dirty
+	&prefix= $&segment_prefix
 	&arrow= $&segment_arrow
 	&timestamp= $&segment_timestamp
 ]

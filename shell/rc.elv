@@ -34,8 +34,6 @@ E:PATH=~/bin:$E:GOPATH/bin:$E:PATH
 use theme:chain
 theme:chain:setup
 
-edit:prompt = $theme:chain:&prompt
-edit:rprompt = $theme:chain:&rprompt
-
+#edit:prompt={ put (~/go/bin/powerline-go -shell bare) }
 #edit:prompt={ edit:styled (put "╭─ ") white; edit:styled (tilde-abbr $pwd) "bold;lightyellow"; edit:styled (put " (") gray; edit:styled (put (whoami)) "lightgreen"; edit:styled (put "@") gray; edit:styled (put (hostname)) "lightblue"; edit:styled (put ")") gray; edit:styled (put "\n╰◉ ") white }
 #edit:rprompt={ edit:styled (put "(") gray; edit:styled (put (date +%H:%M:%S)) "gray"; edit:styled (put ")") gray }
