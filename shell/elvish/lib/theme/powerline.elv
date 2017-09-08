@@ -15,7 +15,7 @@
 # segments will be automatically linked by `$theme:powerline:glyph[chain]`. Each element can be any
 # of the following:
 #
-# - The name of one of the built-in segments. Available segments: `prefix` `user` `host` `arrow` `timestamp` `su` `dir` `git_branch` `git_dirty`
+# - The name of one of the built-in segments. Available segments: `newline` `user` `host` `arrow` `timestamp` `su` `dir` `git_branch` `git_dirty`
 # - A string or the output of `edit:styled`, which will be displayed as-is.
 # - A lambda, which will be called and its output displayed
 # - The output of a call to `theme:powerline:segment <style> <strings>`, which returns a "proper" segment, enclosed in
@@ -25,7 +25,7 @@
 # Default values (all can be configured by assigning to the appropriate variable):
 
 # Configurable prompt segments for each prompt
-prompt_segments = [ su user host dir git_branch git_dirty arrow ]
+prompt_segments = [ host dir git_branch git_dirty newline su user arrow ]
 rprompt_segments = [ timestamp ]
 
 # Glyphs to be used in the prompt
@@ -48,7 +48,7 @@ segment_style_fg = [
 	&cache= "15"
 	&dir= "15"
 	&user= "250"
-	&host= "250"
+	&host= "254"
 	&git_branch= "0"
 	&git_dirty= "15"
 	&timestamp= "237"
@@ -59,15 +59,15 @@ segment_style_bg = [
 	&su= "124"
 	&cache= "31"
 	&dir= "31"
-	&user= "240"
-	&host= "238"
+	&user= "238"
+	&host= "166"
 	&git_branch= "148"
 	&git_dirty= "161"
 	&timestamp= "0"
 ]
 
 # To how many letters to abbreviate directories in the path - 0 to show in full
-prompt_pwd_dir_length = 3
+prompt_pwd_dir_length = 0
 
 # Format to use for the 'timestamp' segment, in strftime(3) format
 timestamp_format = "%H:%M:%S"
@@ -152,6 +152,10 @@ fn -prompt_pwd {
 ######################################################################
 # Built-in chain segments
 
+fn segment_newline {
+  put "\n"
+}
+
 fn segment_su {
 	uid = (id -u)
 	if (eq $uid $root_id) {
@@ -200,6 +204,7 @@ fn segment_timestamp {
 
 # List of built-in segments
 segment = [
+	&newline= $&segment_newline
 	&su= $&segment_su
 	&cache= $&segment_cache
 	&dir= $&segment_dir
@@ -243,10 +248,18 @@ fn -build-chain [segments]{
     #    -log $pwd segment-$seg $time
 	  if (> (count $output) 0) {
 		  if (not $first) {
-        -colorprint $glyph[chain] $lbg $segment_style_bg[$seg]
+        if (not (eq $seg "newline")) {
+          -colorprint $glyph[chain] $lbg $segment_style_bg[$seg]
+        } else {
+          -colorprint $glyph[chain] $lbg "0"
+        }
 		  }
 		  put $@output
-		  first = $false
+      if (not (eq $seg "newline")) {
+        first = $false
+      } else {
+        first = $true
+      }
 	  }
 	}
 }
