@@ -25,8 +25,8 @@
 # Default values (all can be configured by assigning to the appropriate variable):
 
 # Configurable prompt segments for each prompt
-prompt_segments = [ host dir git_branch git_dirty newline su user arrow ]
-rprompt_segments = [ timestamp ]
+prompt_segments = [ host dir git_branch git_dirty newline su user timestamp arrow ]
+rprompt_segments = [ ]
 
 # Glyphs to be used in the prompt
 glyph = [
@@ -51,7 +51,7 @@ segment_style_fg = [
 	&host= "254"
 	&git_branch= "0"
 	&git_dirty= "15"
-	&timestamp= "237"
+	&timestamp= "250"
 ]
 
 segment_style_bg = [
@@ -59,11 +59,11 @@ segment_style_bg = [
 	&su= "124"
 	&cache= "31"
 	&dir= "31"
-	&user= "238"
+	&user= "240"
 	&host= "166"
 	&git_branch= "148"
 	&git_dirty= "161"
-	&timestamp= "0"
+	&timestamp= "238"
 ]
 
 # To how many letters to abbreviate directories in the path - 0 to show in full
