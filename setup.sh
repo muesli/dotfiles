@@ -31,12 +31,19 @@ else
         exit 1
 fi
 
-# Install oh-my-zsh
 cd "$HOME/Sources"
+# Install oh-my-zsh
 if [ ! -d "oh-my-zsh" ]
 then
     git clone https://github.com/muesli/oh-my-zsh.git
 fi
+# Install elvish-libs
+if [ ! -d "elvish-libs" ]
+then
+    git clone https://github.com/muesli/elvish-libs.git
+fi
+mkdir -p "$HOME/.elvish"
+linkTo "elvish-libs" "$HOME/.elvish/lib"
 cd "$pwd"
 
 ./packages/elvish.sh
@@ -44,18 +51,16 @@ cd "$pwd"
 # Setup profile
 linkTo "shell/$OSID/profile" "$HOME/.profile"
 
-# Setup git
-linkTo "git/gitconfig" "$HOME/.gitconfig"
-
 # Setup zsh
 linkTo "shell/zshrc" "$HOME/.zshrc"
 
+# Setup elvish
+linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
+
+# Setup git
+linkTo "git/gitconfig" "$HOME/.gitconfig"
+
 # Setup joe
 linkTo "joe/joerc" "$HOME/.joerc"
-
-# Setup elvish
-mkdir -p "$HOME/.elvish"
-linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
-linkTo "shell/elvish/lib" "$HOME/.elvish/lib"
 
 cd "$pwd"
