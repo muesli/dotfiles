@@ -106,15 +106,6 @@ fn -log [@msg]{
   echo (date) $@msg >> /tmp/chain-debug.log
 }
 
-# Internal function to return a styled string, or plain if color == "default"
-fn -colored [what color]{
-	if (!=s $color default) {
-		edit:styled $what $color
-	} else {
-		put $what
-	}
-}
-
 fn -colorprint [what fg bg]{
   edit:styled $what "38;5;"$fg";48;5;"$bg
   last_bg = $bg
