@@ -189,7 +189,7 @@ fn segment_host {
 fn segment_git_branch {
   branch = (-git_branch_name)
   if (not-eq $branch "") {
-	  prompt_segment $segment_style_fg[git_branch] $segment_style_bg[git_branch] $glyph[git_branch] $branch
+	  prompt_segment $segment_style_fg[git_branch] $segment_style_bg[git_branch] $glyph[git_branch] $branch$glyph[suffix]
   }
 }
 
