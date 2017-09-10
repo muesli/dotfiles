@@ -1,4 +1,4 @@
-# Aliases
+### Aliases
 fn e [@a]{ $E:EDITOR $@a }
 fn ls [@a]{ e:ls --color=auto $@a }
 fn l [@a]{ ls -alh $@a }
@@ -6,7 +6,7 @@ fn pass [@a]{ gopass $@a }
 fn grep [@a]{ e:grep --color $@a }
 fn glog [@a]{ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@a }
 #fn gh [@a]{ cd $E:GOPATH/src/github.com/muesli/$@a }
-fn gh [@a]{ cd (find $E:GOPATH/src/ -type d -name $@a | head -1) }
+fn gh [@a]{ if (== (count $a) 0) { cd $E:GOPATH/src/github.com/muesli } else { cd (find $E:GOPATH/src/ -type d -name $@a | head -1) } }
 fn ch [@a]{ code-oss (find $E:GOPATH/src/ -type d -name $@a | head -1) }
 fn code [@a]{ code-oss $@a }
 
