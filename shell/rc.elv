@@ -2,6 +2,7 @@
 fn e [@a]{ $E:EDITOR $@a }
 fn ls [@a]{ e:ls --color=auto $@a }
 fn l [@a]{ ls -alh $@a }
+fn mcd [@a]{ mkdir $@a ; cd $@a }
 fn pass [@a]{ gopass $@a }
 fn grep [@a]{ e:grep --color $@a }
 fn glog [@a]{ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@a }
