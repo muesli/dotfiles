@@ -42,7 +42,6 @@ if [ ! -d "elvish-libs" ]
 then
     git clone https://github.com/muesli/elvish-libs.git
 fi
-mkdir -p "$HOME/.elvish"
 linkTo "elvish-libs" "$HOME/.elvish/lib"
 cd "$pwd"
 

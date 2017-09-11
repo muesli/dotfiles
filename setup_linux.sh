@@ -22,9 +22,7 @@ else
 fi
 
 # Setup Atom
-mkdir -p "$HOME/.atom"
 linkTo "atom/config.cson" "$HOME/.atom/config.cson"
 
 # Setup Code-OSS
-mkdir -p "$HOME/.config/Code - OSS/User"
 linkTo "code-oss/settings.json" "$HOME/.config/Code - OSS/User/settings.json"

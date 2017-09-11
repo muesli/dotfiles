@@ -6,6 +6,8 @@
 #
 
 function linkTo {
+    mkdir -p $(dirname "$2")
+
     if [ -f "$2" ]
     then
         mv "$2" "$2.before.dotfiles"
