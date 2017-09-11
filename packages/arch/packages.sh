@@ -6,7 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 function installYay {
     pwd="$(pwd)"
 
-    mkdir /tmp/yah
+    mkdir /tmp/yay
     cd /tmp/yay
     curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
     tar -xvzf yay.tar.gz
