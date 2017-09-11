@@ -62,4 +62,7 @@ linkTo "git/gitconfig" "$HOME/.gitconfig"
 # Setup joe
 linkTo "joe/joerc" "$HOME/.joerc"
 
+# Setup micro
+linkTo "micro/settings.json" "$HOME/.config/micro/settings.json"
+
 cd "$pwd"
