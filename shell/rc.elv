@@ -30,6 +30,15 @@ fn ch [@a]{
           head -1)
 }
 
+## Go stuff
+fn godeps [@a]{
+    if (== (count $a) 0) {
+        go list -f '{{join .Deps "\n"}}' . | gostatus -stdin -v
+    } else {
+        go list -f '{{join .Deps "\n"}}' $@a | gostatus -stdin -v
+    }
+}
+
 # Key bindings
 ### Alt-backspace to delete word
 #edit:insert:binding[Alt+Backspace]=$edit:&kill-small-word-left
