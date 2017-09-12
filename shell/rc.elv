@@ -1,21 +1,35 @@
-### Aliases
-fn e [@a]{ $E:EDITOR $@a }
+# Aliases
 fn ls [@a]{ e:ls --color=auto $@a }
-fn l [@a]{ ls -alh $@a }
-fn mcd [@a]{ mkdir $@a ; cd $@a }
-fn pass [@a]{ gopass $@a }
 fn grep [@a]{ e:grep --color $@a }
-fn glog [@a]{ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@a }
-#fn gh [@a]{ cd $E:GOPATH/src/github.com/muesli/$@a }
-fn gh [@a]{ if (== (count $a) 0) { cd $E:GOPATH/src/github.com/muesli } else { cd (find $E:GOPATH/src/ -type d -name $@a | head -1) } }
-fn ch [@a]{ code-oss (find $E:GOPATH/src/ -type d -name $@a | head -1) }
-fn code [@a]{ code-oss $@a }
+fn l [@a]{ ls -alh $@a }
+fn e [@a]{ $E:EDITOR $@a }
+fn mcd [@a]{ mkdir $@a ; cd $@a }
 fn open [@a]{ xdg-open $@a }
+fn pass [@a]{ gopass $@a }
 
-### Key bindings
-# Alt-backspace to delete word
+## Dev stuff
+fn code [@a]{ code-oss $@a }
+### Prettier git log
+fn glog [@a]{
+    git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@a
+}
+### Find path and cd to
+fn gh [@a]{
+    if (== (count $a) 0) {
+        cd $E:GOPATH/src/github.com/muesli
+    } else {
+        cd (find $E:GOPATH/src/ -type d -name $@a | head -1)
+    }
+}
+### Find path and open with code
+fn ch [@a]{
+    code (find $E:GOPATH/src/ -type d -name $@a | head -1)
+}
+
+# Key bindings
+### Alt-backspace to delete word
 #edit:insert:binding[Alt+Backspace]=$edit:&kill-small-word-left
-# Alt-d to delete the word under the cursor
+### Alt-d to delete the word under the cursor
 #edit:insert:binding[Alt-d] = { edit:move-dot-right-word; edit:kill-word-left }
 
 edit:insert:binding[Ctrl+A]=$edit:&move-dot-sol
@@ -25,19 +39,19 @@ edit:insert:binding[Ctrl+H]=$edit:location:&start
 edit:insert:binding[Ctrl+/]=$edit:location:&start
 edit:insert:binding[Alt+Up]={ cd .. }
 
-# vim nav bindings
+### vim nav bindings
 #edit:navigation:binding[h]=$edit:nav:&left
 #edit:navigation:binding[l]=$edit:nav:&right
 #edit:navigation:binding[j]=$edit:nav:&down
 #edit:navigation:binding[k]=$edit:nav:&up
 
-# surpress warning when at end of history
+### surpress warning when at end of history
 edit:insert:binding[Down]={ }
 
-### Completion
+# Completion
 #edit:completer['']={ e:bash ~/.elvish/get-completion.bash $@args }
 
-### ENV vars
+# ENV vars
 #E:LANG=en_US.UTF-8
 #E:LANGUAGE=en_US.UTF-8
 E:LS_COLORS=[(splits "'" (dircolors | head -1))][1]
@@ -46,6 +60,6 @@ E:EDITOR=micro
 E:QT_PKG_CONFIG=true
 E:PATH=~/bin:$E:GOPATH/bin:$E:PATH
 
-### Prompt
+# Prompt
 use theme:powerline
 theme:powerline:setup
