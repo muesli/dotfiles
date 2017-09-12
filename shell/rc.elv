@@ -18,12 +18,16 @@ fn gh [@a]{
     if (== (count $a) 0) {
         cd $E:GOPATH/src/github.com/muesli
     } else {
-        cd (find $E:GOPATH/src/ -type d -name $@a | head -1)
+        cd (find ~/Sources -type d -name $@a |
+            grep -v pkg | grep -v '.old' | grep -v '.backup' |
+            head -1)
     }
 }
 ### Find path and open with code
 fn ch [@a]{
-    code (find $E:GOPATH/src/ -type d -name $@a | head -1)
+    code (find ~/Sources -type d -name $@a |
+          grep -v pkg | grep -v '.old' | grep -v '.backup' |
+          head -1)
 }
 
 # Key bindings
