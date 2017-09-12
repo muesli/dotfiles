@@ -10,6 +10,7 @@ fn glog [@a]{ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cres
 fn gh [@a]{ if (== (count $a) 0) { cd $E:GOPATH/src/github.com/muesli } else { cd (find $E:GOPATH/src/ -type d -name $@a | head -1) } }
 fn ch [@a]{ code-oss (find $E:GOPATH/src/ -type d -name $@a | head -1) }
 fn code [@a]{ code-oss $@a }
+fn open [@a]{ xdg-open $@a }
 
 ### Key bindings
 # Alt-backspace to delete word
