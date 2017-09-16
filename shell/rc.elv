@@ -6,9 +6,10 @@ fn e [@a]{ $E:EDITOR $@a }
 fn mcd [@a]{ mkdir $@a ; cd $@a }
 fn open [@a]{ xdg-open $@a }
 fn pass [@a]{ gopass $@a }
+fn cd [@dir]{ dir:cd $@dir }
+fn code [@a]{ code-oss $@a }
 
 ## Dev stuff
-fn code [@a]{ code-oss $@a }
 ### Prettier git log
 fn glog [@a]{
     git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@a
@@ -49,8 +50,7 @@ edit:insert:binding[Ctrl+A]=$edit:&move-dot-sol
 edit:insert:binding[Ctrl+E]=$edit:&move-dot-eol
 edit:insert:binding[Ctrl+L]={ clear > /dev/tty }
 edit:insert:binding[Ctrl+H]=$edit:location:&start
-edit:insert:binding[Ctrl+/]=$edit:location:&start
-edit:insert:binding[Alt+Up]={ cd .. }
+edit:insert:binding[Alt+Up]={ dir:cd .. }
 
 ### vim nav bindings
 #edit:navigation:binding[h]=$edit:nav:&left
@@ -73,6 +73,17 @@ E:EDITOR=micro
 E:QT_PKG_CONFIG=true
 E:PATH=~/bin:$E:GOPATH/bin:$E:PATH
 
+use narrow
+
 # Prompt
 use theme:powerline
 theme:powerline:setup
+update_prompt = { _ = ?(theme:powerline:cache_prompts; edit:redraw) }
+
+# Dir modes
+use dir
+dir:setup
+edit:insert:binding[Alt-Left] = $dir:&left-word-or-prev-dir
+edit:insert:binding[Alt-Right] = $dir:&right-word-or-next-dir
+edit:insert:binding[Ctrl+/] = $dir:&history-chooser
+dir:after-cd = [ $@dir:after-cd $update_prompt ]
