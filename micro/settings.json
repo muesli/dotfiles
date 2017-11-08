@@ -7,6 +7,8 @@
     "cursorline": true,
     "eofnewline": true,
     "ftoptions": true,
+    "gofmt": true,
+    "goimports": false,
     "ignorecase": false,
     "indentchar": " ",
     "infobar": true,
