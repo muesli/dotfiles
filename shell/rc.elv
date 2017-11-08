@@ -1,3 +1,6 @@
+use narrow
+use dir
+
 # Aliases
 fn ls [@a]{ e:ls --color=auto $@a }
 fn grep [@a]{ e:grep --color $@a }
@@ -73,15 +76,12 @@ E:EDITOR=micro
 E:QT_PKG_CONFIG=true
 E:PATH=~/bin:$E:GOPATH/bin:$E:PATH
 
-use narrow
-
 # Prompt
 use theme:powerline
 theme:powerline:setup
 update_prompt = { _ = ?(theme:powerline:cache_prompts; edit:redraw) }
 
 # Dir modes
-use dir
 dir:setup
 edit:insert:binding[Alt-Left] = $dir:&left-word-or-prev-dir
 edit:insert:binding[Alt-Right] = $dir:&right-word-or-next-dir
