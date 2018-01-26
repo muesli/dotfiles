@@ -8,7 +8,7 @@
     "eofnewline": true,
     "ftoptions": true,
     "gofmt": true,
-    "goimports": false,
+    "goimports": true,
     "ignorecase": false,
     "indentchar": " ",
     "infobar": true,
