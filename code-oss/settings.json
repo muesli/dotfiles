@@ -9,5 +9,12 @@
     "files.insertFinalNewline": true,
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
-    "html.format.indentHandlebars": true
+    "go.coverageOptions": "showBothCoveredAndUncoveredCode",
+    "go.coverOnSave": true,
+    "go.lintOnSave": "package",
+    "go.lintTool": "gometalinter",
+    "go.testOnSave": true,
+    "go.vetOnSave": "package",
+    "html.format.indentHandlebars": true,
+    "workbench.startupEditor": "welcomePage"
 }
