@@ -49,10 +49,10 @@ fn godeps [@a]{
 ### Alt-d to delete the word under the cursor
 #edit:insert:binding[Alt-d] = { edit:move-dot-right-word; edit:kill-word-left }
 
-edit:insert:binding[Ctrl+A]=$edit:&move-dot-sol
-edit:insert:binding[Ctrl+E]=$edit:&move-dot-eol
+edit:insert:binding[Ctrl+A]=$edit:move-dot-sol~
+edit:insert:binding[Ctrl+E]=$edit:move-dot-eol~
 edit:insert:binding[Ctrl+L]={ clear > /dev/tty }
-edit:insert:binding[Ctrl+H]=$edit:location:&start
+edit:insert:binding[Ctrl+H]=$edit:location:start~
 edit:insert:binding[Alt+Up]={ dir:cd .. }
 
 ### vim nav bindings
@@ -83,7 +83,7 @@ update_prompt = { _ = ?(theme:powerline:cache_prompts; edit:redraw) }
 
 # Dir modes
 dir:setup
-edit:insert:binding[Alt-Left] = $dir:&left-word-or-prev-dir
-edit:insert:binding[Alt-Right] = $dir:&right-word-or-next-dir
-edit:insert:binding[Ctrl+/] = $dir:&history-chooser
+edit:insert:binding[Alt-Left] = $dir:left-word-or-prev-dir~
+edit:insert:binding[Alt-Right] = $dir:right-word-or-next-dir~
+edit:insert:binding[Ctrl+/] = $dir:history-chooser~
 dir:after-cd = [ $@dir:after-cd $update_prompt ]
