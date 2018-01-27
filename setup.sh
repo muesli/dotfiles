@@ -37,12 +37,6 @@ if [ ! -d "oh-my-zsh" ]
 then
     git clone https://github.com/muesli/oh-my-zsh.git
 fi
-# Install elvish-libs
-if [ ! -d "elvish-libs" ]
-then
-    git clone https://github.com/muesli/elvish-libs.git
-fi
-linkTo "elvish-libs" "$HOME/.elvish/lib"
 cd "$pwd"
 
 ./packages/elvish.sh
