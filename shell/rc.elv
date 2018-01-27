@@ -79,11 +79,9 @@ edit:insert:binding[Down]={ }
 # Prompt
 use theme:powerline
 theme:powerline:setup
-update_prompt = { _ = ?(theme:powerline:cache_prompts; edit:redraw) }
 
 # Dir modes
 dir:setup
 edit:insert:binding[Alt-Left] = $dir:left-word-or-prev-dir~
 edit:insert:binding[Alt-Right] = $dir:right-word-or-next-dir~
 edit:insert:binding[Ctrl+/] = $dir:history-chooser~
-dir:after-cd = [ $@dir:after-cd $update_prompt ]
