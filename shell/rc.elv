@@ -1,5 +1,13 @@
 use narrow
-use dir
+use epm
+
+# epm Deps
+epm:install &silent-if-installed=$true `
+    github.com/muesli/elvish-libs `
+    github.com/zzamboni/elvish-completions `
+    github.com/zzamboni/elvish-modules
+
+use github.com/zzamboni/elvish-modules/dir
 
 # ENV vars
 #E:LANG=en_US.UTF-8
@@ -73,12 +81,14 @@ edit:insert:binding[Alt+Up]={ dir:cd .. }
 ### surpress warning when at end of history
 edit:insert:binding[Down]={ }
 
-# Completion
+# Completions
 #edit:completer['']={ e:bash ~/.elvish/get-completion.bash $@args }
+use github.com/zzamboni/elvish-completions/cd
+use github.com/zzamboni/elvish-completions/git
 
 # Prompt
-use theme:powerline
-theme:powerline:setup
+use github.com/muesli/elvish-libs/theme/powerline
+powerline:setup
 
 # Dir modes
 dir:setup
