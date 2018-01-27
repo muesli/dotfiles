@@ -19,7 +19,7 @@ E:QT_PKG_CONFIG=true
 E:PATH=~/bin:$E:GOPATH/bin:$E:PATH
 
 # Aliases
-fn ls [@a]{ e:ls --color=auto $@a }
+#fn ls [@a]{ e:ls --color=auto $@a }
 #fn grep [@a]{ e:grep --color $@a }
 fn l [@a]{ ls -alh $@a }
 fn e [@a]{ $E:EDITOR $@a }
