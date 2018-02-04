@@ -2,9 +2,9 @@ use narrow
 use epm
 
 # epm Deps
-epm:install &silent-if-installed=$true `
-    github.com/muesli/elvish-libs `
-    github.com/zzamboni/elvish-completions `
+epm:install &silent-if-installed=$true \
+    github.com/muesli/elvish-libs \
+    github.com/zzamboni/elvish-completions \
     github.com/zzamboni/elvish-modules
 
 use github.com/zzamboni/elvish-modules/dir
