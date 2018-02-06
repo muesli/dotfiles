@@ -21,7 +21,7 @@ Enable microcode updates: https://wiki.archlinux.org/index.php/microcode
 
 Install systemd-boot pacman hook: https://wiki.archlinux.org/index.php/systemd-boot#Automatically
 
-Enable SDDM: ```systemctl enable sddm```
+Enable SDDM: `systemctl enable sddm`
 
 Setup GPG & SSH keys
 
@@ -33,3 +33,7 @@ Limit journal size: https://wiki.archlinux.org/index.php/Systemd#Journal_size_li
 Configure Avahi/mDNS: https://wiki.archlinux.org/index.php/avahi
 
 Install TLP: https://wiki.archlinux.org/index.php/TLP
+
+GPG caching timeout: Edit `~/.gnupg/gpg-agent.conf`
+
+sudo timeout: Edit `/etc/sudoers`, add: `Defaults:muesli timestamp_timeout=30`
