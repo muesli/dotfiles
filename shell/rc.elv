@@ -22,7 +22,7 @@ E:PATH=~/bin:$E:GOPATH/bin:$E:PATH
 #fn ls [@a]{ e:ls --color=auto $@a }
 #fn grep [@a]{ e:grep --color $@a }
 fn l [@a]{ ls -alh $@a }
-fn e [@a]{ $E:EDITOR $@a }
+fn e [@a]{ (external $E:EDITOR) $@a }
 fn mcd [@a]{ mkdir $@a ; cd $@a }
 fn open [@a]{ xdg-open $@a }
 fn pass [@a]{ gopass $@a }
