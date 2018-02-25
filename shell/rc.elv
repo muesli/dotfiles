@@ -89,6 +89,7 @@ use github.com/zzamboni/elvish-completions/git
 # Prompt
 use github.com/muesli/elvish-libs/theme/powerline
 powerline:setup
+#edit:-prompts-max-wait = 0.03
 
 # Dir modes
 #dir:init
