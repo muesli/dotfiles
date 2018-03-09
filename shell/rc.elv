@@ -89,7 +89,8 @@ use github.com/zzamboni/elvish-completions/git
 # Prompt
 use github.com/muesli/elvish-libs/theme/powerline
 powerline:setup
-#edit:-prompts-max-wait = 0.03
+edit:prompt-stale-transform = $all~
+edit:rprompt-stale-transform = $all~
 
 # Dir modes
 #dir:init
