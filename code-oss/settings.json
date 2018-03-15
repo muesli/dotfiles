@@ -1,6 +1,6 @@
 {
     "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.formatOnSave": true,
     "editor.detectIndentation": true,
     "window.zoomLevel": 1,
