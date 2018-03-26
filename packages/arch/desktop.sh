@@ -7,5 +7,5 @@ PACKAGES=("${PACKAGES[@]}" "ark" "avahi" "browserpass" "chromium-widevine" \
     "ksystemlog" "kwalletmanager" "kwrite" "noto-fonts-emoji" "obs-studio" \
     "okular" "pavucontrol-qt" "phonon-qt5-vlc" "plasma5-applets-hoppla-sa-git" \
     "plasma-meta" "plasma5-themes-chakra-heritage" "pulseaudio-alsa" \
-    "pulseaudio-zeroconf" "qt4" "sshfs" "systemdgenie" "telegram-desktop-bin" \
+    "pulseaudio-zeroconf" "qt4" "sshfs" "systemdgenie" "telegram-desktop" \
     "trash-cli" "ttf-liberation" "vlc" "yakuake")
