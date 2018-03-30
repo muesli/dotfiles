@@ -88,7 +88,6 @@ use github.com/zzamboni/elvish-completions/git
 
 # Prompt
 use github.com/muesli/elvish-libs/theme/powerline
-powerline:setup
 edit:prompt-stale-transform = $all~
 edit:rprompt-stale-transform = $all~
 
