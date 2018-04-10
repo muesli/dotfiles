@@ -70,7 +70,7 @@ fn godeps [@a]{
 edit:insert:binding[Ctrl+A]=$edit:move-dot-sol~
 edit:insert:binding[Ctrl+E]=$edit:move-dot-eol~
 edit:insert:binding[Ctrl+L]={ clear > /dev/tty }
-edit:insert:binding[Ctrl+H]=$edit:location:start~
+edit:insert:binding[Ctrl+P]=$edit:location:start~
 edit:insert:binding[Alt+Up]={ dir:cd .. }
 
 ### vim nav bindings
