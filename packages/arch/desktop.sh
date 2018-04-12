@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PACKAGES=("${PACKAGES[@]}" "ark" "avahi" "browserpass" "chromium-widevine" \
-    "dolphin" "falkon-git" "frei0r-plugins" "gopass" "gwenview" "kaddressbook" \
+    "dolphin" "falkon" "frei0r-plugins" "gopass" "gwenview" "kaddressbook" \
     "kate" "kcalc" "kdeconnect" "kdenlive" "kdialog" "kleopatra" "kmail" \
     "konsole" "kontact" "konversation" "korganizer" "krita" "ksysguard" \
     "ksystemlog" "kwalletmanager" "kwrite" "noto-fonts-emoji" "obs-studio" \
