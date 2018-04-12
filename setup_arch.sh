@@ -12,3 +12,4 @@ set -e
 # Install drivers
 #./packages/arch/drivers/intel.sh
 ./packages/arch/drivers/bluetooth.sh
+./packages/arch/drivers/smartcard.sh
