@@ -17,6 +17,7 @@ E:GOPATH=~/Sources/go
 E:EDITOR=micro
 E:QT_PKG_CONFIG=true
 E:PATH=~/bin:$E:GOPATH/bin:$E:PATH
+E:SSH_AUTH_SOCK=$E:XDG_RUNTIME_DIR/gnupg/S.gpg-agent.ssh
 
 # Aliases
 fn ls [@a]{ e:ls --color=auto $@a }
