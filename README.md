@@ -1,20 +1,23 @@
-# dotfiles
-My dotfiles
+# muesli's dotfiles
 
-# Bootstrap your Arch Install
+## Platform Support
 
-```
-$ ./setup.sh
-```
-
-# Install Drivers
-For Intel i5/i7 based machines, you can simply run:
+On both ArchLinux and macOS run `setup.sh` to bootstrap an install:
 
 ```
-$ ./packages/drivers/intel.sh
+./setup.sh
 ```
 
-# After Install
+## Bootstrap an ArchLinux Install
+
+### Install Drivers
+For Intel i5/i7 based machines simply run:
+
+```
+./packages/drivers/intel.sh
+```
+
+### First Steps
 Add users to required groups: https://wiki.archlinux.org/index.php/users_and_groups#Group_list
 
 Enable microcode updates: https://wiki.archlinux.org/index.php/microcode
@@ -23,7 +26,9 @@ Install systemd-boot pacman hook: https://wiki.archlinux.org/index.php/systemd-b
 
 Enable SDDM: `systemctl enable sddm`
 
-## Setup GPG & SSH keys
+### Configuration
+
+#### Setup GPG & SSH keys
 
 ```
 echo "enable-ssh-support" >> ~/.gnupg/gpg-agent.conf
@@ -34,7 +39,7 @@ echo "disable-ccid" >> ~/.gnupg/scdaemon.conf
 
 More info in the Arch wiki: https://wiki.archlinux.org/index.php/GnuPG#SSH_agent
 
-# System Tweaks
+#### System Tweaks
 Enable smartd: https://wiki.archlinux.org/index.php/S.M.A.R.T.
 
 Limit journal size: https://wiki.archlinux.org/index.php/Systemd#Journal_size_limit
@@ -43,7 +48,9 @@ Configure Avahi/mDNS: https://wiki.archlinux.org/index.php/avahi
 
 Install TLP: https://wiki.archlinux.org/index.php/TLP
 
-## Timeouts
+## Configuration for Unix Platforms
+
+### Timeouts
 
 GPG caching timeout: Edit `~/.gnupg/gpg-agent.conf`
 
