@@ -32,6 +32,8 @@ echo "card-timeout 5" >> ~/.gnupg/scdaemon.conf
 echo "disable-ccid" >> ~/.gnupg/scdaemon.conf
 ```
 
+More info in the Arch wiki: https://wiki.archlinux.org/index.php/GnuPG#SSH_agent
+
 # System Tweaks
 Enable smartd: https://wiki.archlinux.org/index.php/S.M.A.R.T.
 
