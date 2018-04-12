@@ -23,7 +23,14 @@ Install systemd-boot pacman hook: https://wiki.archlinux.org/index.php/systemd-b
 
 Enable SDDM: `systemctl enable sddm`
 
-Setup GPG & SSH keys
+## Setup GPG & SSH keys
+
+```
+echo "enable-ssh-support" >> ~/.gnupg/gpg-agent.conf
+echo "pcsc-driver /usr/lib/libpcsclite.so" > ~/.gnupg/scdaemon.conf
+echo "card-timeout 5" >> ~/.gnupg/scdaemon.conf
+echo "disable-ccid" >> ~/.gnupg/scdaemon.conf
+```
 
 # System Tweaks
 Enable smartd: https://wiki.archlinux.org/index.php/S.M.A.R.T.
@@ -33,6 +40,8 @@ Limit journal size: https://wiki.archlinux.org/index.php/Systemd#Journal_size_li
 Configure Avahi/mDNS: https://wiki.archlinux.org/index.php/avahi
 
 Install TLP: https://wiki.archlinux.org/index.php/TLP
+
+## Timeouts
 
 GPG caching timeout: Edit `~/.gnupg/gpg-agent.conf`
 
