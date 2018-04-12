@@ -52,6 +52,19 @@ Install TLP: https://wiki.archlinux.org/index.php/TLP
 
 ### Timeouts
 
-GPG caching timeout: Edit `~/.gnupg/gpg-agent.conf`
+#### GPG Caching
 
-sudo timeout: Edit `/etc/sudoers`, add: `Defaults:muesli timestamp_timeout=30`
+Edit `~/.gnupg/gpg-agent.conf`
+
+```
+echo "default-cache-ttl 1800" >> ~/.gnupg/gpg-agent.conf
+echo "max-cache-ttl 999999" >> ~/.gnupg/gpg-agent.conf
+```
+
+### sudo Timeout
+
+Edit `/etc/sudoers`
+
+```
+echo "Defaults:muesli timestamp_timeout=30" >> /etc/sudoers
+```
