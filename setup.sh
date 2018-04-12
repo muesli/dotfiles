@@ -17,12 +17,11 @@ source "shell/profile"
 
 if [[ "$OSTYPE" == "linux"* ]]; then
         # Linux
-        echo "Running additional setup for Linux..."
         ./setup_linux.sh
         OSID="linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         # Mac OSX
-        echo "Running additional setup for macOS..."
+        echo "Running setup for macOS..."
         ./setup_osx.sh
         OSID="macos"
 else
