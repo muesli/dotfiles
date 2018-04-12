@@ -1,3 +1,6 @@
 #!/bin/bash
 
-PACKAGES=("${PACKAGES[@]}" "xorg-server")
+PACKAGES=("${PACKAGES[@]}"
+    # X.org Server
+    "xorg-server"
+)

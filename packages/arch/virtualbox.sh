@@ -1,3 +1,6 @@
 #!/bin/bash
 
-PACKAGES=("${PACKAGES[@]}" "virtualbox" "virtualbox-host-modules-arch")
+PACKAGES=("${PACKAGES[@]}"
+    # VirtualBox plus kernel modules
+    "virtualbox" "virtualbox-host-modules-arch"
+)
