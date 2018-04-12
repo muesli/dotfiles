@@ -49,6 +49,7 @@ source "$DIR/base.sh"
 source "$DIR/dev.sh"
 source "$DIR/xorg.sh"
 source "$DIR/desktop.sh"
+source "$DIR/desktop_plasma.sh"
 source "$DIR/virtualbox.sh"
 
 yaourt -S --needed ${PACKAGES[@]}
