@@ -6,7 +6,8 @@
 #
 
 function linkTo {
-    mkdir -p $(dirname "$2")
+    DSTDIR=$(dirname "$2")
+    mkdir -p "$DSTDIR"
 
     if [ -f "$2" ]
     then
