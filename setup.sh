@@ -9,11 +9,11 @@ pwd="$(pwd)"
 
 . setup_helpers.sh
 
-# create required dirs
-mkdir -p "$HOME/Sources/go"
-
 # source .profile so we got correct env-vars for setup
 source "shell/profile"
+
+# create required dirs
+mkdir -p "$HOME/Sources/go"
 
 if [[ "$OSTYPE" == "linux"* ]]; then
         # Linux
