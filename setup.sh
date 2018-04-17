@@ -17,17 +17,17 @@ mkdir -p "$GOPATH"
 
 if [[ "$OSTYPE" == "linux"* ]]; then
         # Linux
-        ./setup_linux.sh
         OSID="linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-        # Mac OSX
-        ./setup_osx.sh
+        # macOS
         OSID="macos"
 else
         # Unknown
         echo "Sorry, but setup for '$OSTYPE' is not supported (yet)!"
         exit 1
 fi
+
+./setup_$OSID.sh
 
 cd "$HOME/Sources"
 # Install oh-my-zsh
