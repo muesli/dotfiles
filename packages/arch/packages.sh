@@ -6,6 +6,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 function installYay {
     pwd="$(pwd)"
 
+    sudo pacman -S --noconfirm --needed base-devel diffutils wget
+
     mkdir /tmp/yay
     cd /tmp/yay
     curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
@@ -40,8 +42,8 @@ function installYaourt {
 # Update system
 sudo pacman -Syu
 
-# Install yaourt
-which yaourt >/dev/null || installYaourt
+# Install yay
+which yay >/dev/null || installYay
 
 # Install packages
 PACKAGES=()
@@ -52,4 +54,4 @@ source "$DIR/desktop.sh"
 source "$DIR/desktop_plasma.sh"
 source "$DIR/virtualbox.sh"
 
-yaourt -S --needed ${PACKAGES[@]}
+yay -S --needed ${PACKAGES[@]}
