@@ -13,7 +13,7 @@ pwd="$(pwd)"
 source "shell/profile"
 
 # create required dirs
-mkdir -p "$HOME/Sources/go"
+mkdir -p "$GOPATH"
 
 if [[ "$OSTYPE" == "linux"* ]]; then
         # Linux
