@@ -21,7 +21,6 @@ if [[ "$OSTYPE" == "linux"* ]]; then
         OSID="linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         # Mac OSX
-        echo "Running setup for macOS..."
         ./setup_osx.sh
         OSID="macos"
 else
