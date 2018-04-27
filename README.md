@@ -35,6 +35,8 @@ echo "enable-ssh-support" >> ~/.gnupg/gpg-agent.conf
 echo "pcsc-driver /usr/lib/libpcsclite.so" > ~/.gnupg/scdaemon.conf
 echo "card-timeout 5" >> ~/.gnupg/scdaemon.conf
 echo "disable-ccid" >> ~/.gnupg/scdaemon.conf
+systemctl enable pcscd
+systemctl start pcscd
 ```
 
 More info in the Arch wiki: https://wiki.archlinux.org/index.php/GnuPG#SSH_agent
