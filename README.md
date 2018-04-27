@@ -39,6 +39,13 @@ systemctl enable pcscd
 systemctl start pcscd
 ```
 
+Fetch your public key from the SmartCard:
+
+```
+gpg --card-edit
+gpg/card> fetch
+```
+
 More info in the Arch wiki: https://wiki.archlinux.org/index.php/GnuPG#SSH_agent
 
 #### Adjust System Limits
