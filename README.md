@@ -28,7 +28,7 @@ Enable SDDM: `systemctl enable sddm`
 
 ### Configuration
 
-#### Setup GPG & SSH keys
+#### Setup GPG SmartCard
 
 ```
 echo "enable-ssh-support" >> ~/.gnupg/gpg-agent.conf
@@ -60,9 +60,17 @@ Install TLP: https://wiki.archlinux.org/index.php/TLP
 
 ## Configuration for Unix Platforms
 
-### Timeouts
+### GPG
 
-#### GPG Caching
+#### Preferred Key
+
+Edit `~/.gnupg/gpg.conf`
+
+```
+default-key 7C04491D
+```
+
+#### Caching & Timeouts
 
 Edit `~/.gnupg/gpg-agent.conf`
 
