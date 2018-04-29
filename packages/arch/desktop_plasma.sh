@@ -30,7 +30,7 @@ PACKAGES=("${PACKAGES[@]}"
     # IRC client
     "konversation"
     # System monitors
-    "ksysguard" "ksystemlog"
+    "ksystemlog"
     # Manager for encrypted password wallet
     "kwalletmanager"
     # Audio / mixer
