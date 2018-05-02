@@ -26,6 +26,13 @@ Install systemd-boot pacman hook: https://wiki.archlinux.org/index.php/systemd-b
 
 Enable SDDM: `systemctl enable sddm`
 
+Remove the Plasma Cashew:
+
+```
+wget http://vizzzion.org/stuff/emptytoolbox.plasmoid
+plasmapkg2 -t package -i emptytoolbox.plasmoid
+```
+
 ### Configuration
 
 #### Setup GPG SmartCard
