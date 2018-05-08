@@ -2,7 +2,7 @@
 
 PACKAGES=("${PACKAGES[@]}"
     # IDEs / Code editors
-    "atom" "code" "kdevelop"
+    "code" "kdevelop"
     # CMake
     "cmake" "extra-cmake-modules"
     # SCMs
