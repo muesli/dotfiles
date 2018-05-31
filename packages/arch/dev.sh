@@ -12,7 +12,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Web-dev on CLI
     "httpie" "js-beautify"
     # Image handling
-    "pngcrush"
+    "pngcrush" "cutycapt-qt5-git"
     # Qt5 packages
     "qt5-base" "qt5-systems" "qt5-feedback" "qt5-xmlpatterns" "qt5-x11extras"
     "qt5-webview" "qt5-webchannel" "qt5-websockets" "qt5-webkit" "qt5-webengine"
