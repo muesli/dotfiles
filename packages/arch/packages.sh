@@ -6,7 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 function installYay {
     pwd="$(pwd)"
 
-    sudo pacman -S --noconfirm --needed go
+    sudo pacman -S --noconfirm --needed go make gcc fakeroot patch
 
     mkdir /tmp/yay
     cd /tmp/yay
