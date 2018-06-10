@@ -6,6 +6,7 @@
     "window.zoomLevel": 1,
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Monokai",
+    "files.autoSave": "onWindowChange",
     "files.insertFinalNewline": true,
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
