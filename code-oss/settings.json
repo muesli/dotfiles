@@ -12,7 +12,7 @@
     "files.trimTrailingWhitespace": true,
     "go.coverageOptions": "showBothCoveredAndUncoveredCode",
     "go.coverOnSave": true,
-    "go.lintTool": "gometalinter",
+    "go.lintTool": "golangci-lint",
     "go.testOnSave": true,
     "go.gopath": "/home/muesli/Sources/go",
     "go.toolsGopath": "/home/muesli/Sources/go/bin",
