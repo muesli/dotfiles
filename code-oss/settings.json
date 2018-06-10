@@ -17,5 +17,6 @@
     "go.gopath": "/home/muesli/Sources/go",
     "go.toolsGopath": "/home/muesli/Sources/go/bin",
     "html.format.indentHandlebars": true,
-    "workbench.startupEditor": "welcomePage"
+    "workbench.startupEditor": "welcomePage",
+    "terminal.integrated.shell.linux": "/home/muesli/Sources/go/bin/elvish"
 }
