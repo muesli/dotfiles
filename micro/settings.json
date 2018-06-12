@@ -19,7 +19,7 @@
     "keymenu": false,
     "linter": true,
     "literate": true,
-    "matchbrace": false,
+    "matchbrace": true,
     "mouse": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
@@ -27,10 +27,10 @@
     "pluginrepos": [],
     "rmtrailingws": true,
     "ruler": true,
-    "savecursor": false,
+    "savecursor": true,
     "savehistory": true,
     "saveundo": false,
-    "scrollbar": false,
+    "scrollbar": true,
     "scrollmargin": 3,
     "scrollspeed": 2,
     "softwrap": false,
@@ -44,6 +44,6 @@
     "tabmovement": false,
     "tabsize": 4,
     "tabstospaces": false,
-    "termtitle": false,
+    "termtitle": true,
     "useprimary": true
 }
