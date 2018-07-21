@@ -11,6 +11,7 @@ On both ArchLinux and macOS run `setup.sh` to bootstrap an install:
 ## Bootstrap an ArchLinux Install
 
 ### Install Drivers
+
 For Intel i5/i7 based machines simply run:
 
 ```
@@ -18,6 +19,7 @@ For Intel i5/i7 based machines simply run:
 ```
 
 ### First Steps
+
 Add users to required groups: https://wiki.archlinux.org/index.php/users_and_groups#Group_list
 
 Enable microcode updates: https://wiki.archlinux.org/index.php/microcode
@@ -66,6 +68,7 @@ DefaultTasksMax=32768
 ```
 
 #### System Tweaks
+
 Enable smartd: https://wiki.archlinux.org/index.php/S.M.A.R.T.
 
 Limit journal size: https://wiki.archlinux.org/index.php/Systemd#Journal_size_limit
@@ -93,6 +96,20 @@ Edit `~/.gnupg/gpg-agent.conf`
 ```
 echo "default-cache-ttl 1800" >> ~/.gnupg/gpg-agent.conf
 echo "max-cache-ttl 999999" >> ~/.gnupg/gpg-agent.conf
+```
+
+### Setup multi-factor authentication
+
+Edit `/etc/pam.d/system-auth-yubico`
+
+```
+echo "auth required pam_yubico.so id=xxxxx" > /etc/pam.d/system-auth-yubico
+```
+
+Put the public part of your OTP (the first 12 characters) in `~/.yubico/authorized_yubikeys`:
+
+```
+muesli:cc..........
 ```
 
 ### sudo Timeout
