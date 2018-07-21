@@ -83,7 +83,7 @@ Install TLP: https://wiki.archlinux.org/index.php/TLP
 Edit `~/.gnupg/gpg.conf`
 
 ```
-default-key 7C04491D
+default-key CA1EBB7E
 ```
 
 #### Caching & Timeouts
