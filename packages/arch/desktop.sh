@@ -21,4 +21,6 @@ PACKAGES=("${PACKAGES[@]}"
     "telegram-desktop"
     # Access Desktop trash from CLI
     "trash-cli"
+    # SmartCards
+    "yubikey-personalization-gui"
 )

@@ -13,6 +13,8 @@ PACKAGES=("${PACKAGES[@]}"
     "joe" "micro-bin"
     # Key management
     "keybase"
+    # Security
+    "yubico-pam" "pam_beacon-git"
     # CLI tools
     "ripgrep" "time" "tmux" "which"
     # Decompression
