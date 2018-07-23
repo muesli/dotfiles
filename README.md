@@ -104,9 +104,10 @@ echo "default-cache-ttl 1800" >> ~/.gnupg/gpg-agent.conf
 echo "max-cache-ttl 999999" >> ~/.gnupg/gpg-agent.conf
 ```
 
-### Setup pam_poldi
+### Setup poldi
 
-Add your key to `/etc/poldi/localdb/keys` and add your user to `/etc/poldi/localdb/users`.
+Install `poldi-git`. Add your key to `/etc/poldi/localdb/keys` and add your user
+to `/etc/poldi/localdb/users`.
 
 Edit `/etc/pam.d/sudo` and prepend:
 
