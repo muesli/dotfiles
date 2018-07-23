@@ -18,6 +18,12 @@ For Intel i5/i7 based machines simply run:
 ./packages/drivers/intel.sh
 ```
 
+Before you can use a bluetooth device, run:
+
+```
+./packages/drivers/bluetooth.sh
+```
+
 ### First Steps
 
 Add users to required groups: https://wiki.archlinux.org/index.php/users_and_groups#Group_list
