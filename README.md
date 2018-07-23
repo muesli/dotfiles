@@ -119,3 +119,11 @@ Edit `/etc/sudoers`
 ```
 echo "Defaults:muesli timestamp_timeout=30" >> /etc/sudoers
 ```
+
+### libinput Gestures
+
+Install `libinput-gestures` and edit `~/.config/libinput-gestures.conf`.
+
+```
+libinput-gestures-setup autostart
+```
