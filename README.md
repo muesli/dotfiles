@@ -15,13 +15,13 @@ On both ArchLinux and macOS run `setup.sh` to bootstrap an install:
 For Intel i5/i7 based machines simply run:
 
 ```
-./packages/drivers/intel.sh
+./packages/arch/drivers/intel.sh
 ```
 
 Before you can use a bluetooth device, run:
 
 ```
-./packages/drivers/bluetooth.sh
+./packages/arch/drivers/bluetooth.sh
 ```
 
 ### First Steps
