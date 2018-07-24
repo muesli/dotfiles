@@ -64,7 +64,7 @@ fn godeps [@a]{
 
 # Key bindings
 ### Alt-backspace to delete word
-#edit:insert:binding[Alt+Backspace]=$edit:&kill-small-word-left
+edit:insert:binding[Alt+Backspace]=$edit:kill-small-word-left~
 ### Alt-d to delete the word under the cursor
 #edit:insert:binding[Alt-d] = { edit:move-dot-right-word; edit:kill-word-left }
 
