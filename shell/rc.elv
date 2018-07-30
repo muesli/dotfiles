@@ -68,6 +68,8 @@ edit:insert:binding[Alt+Backspace]=$edit:kill-small-word-left~
 ### Alt-d to delete the word under the cursor
 #edit:insert:binding[Alt-d] = { edit:move-dot-right-word; edit:kill-word-left }
 
+edit:insert:binding[Ctrl+Left]=$edit:move-dot-left-small-word~
+edit:insert:binding[Ctrl+Right]=$edit:move-dot-right-small-word~
 edit:insert:binding[Ctrl+A]=$edit:move-dot-sol~
 edit:insert:binding[Ctrl+E]=$edit:move-dot-eol~
 edit:insert:binding[Ctrl+L]={ clear > /dev/tty }
