@@ -129,6 +129,12 @@ Put the public part of your OTP (the first 12 characters) in `~/.yubico/authoriz
 muesli:cc..........
 ```
 
+Edit `/etc/pam.d/sudo` and prepend:
+
+```
+auth sufficient pam_yubico.so id=xxxxx
+```
+
 ### sudo Timeout
 
 Edit `/etc/sudoers`
