@@ -7,6 +7,8 @@ PACKAGES=("${PACKAGES[@]}"
     "browserpass" "gopass"
     # Browsers
     "chromium" "chromium-widevine" "firefox"
+    # OpenVPN
+    "networkmanager-openvpn"
     # Video players
     "mpv" "vlc"
     # Extra fonts
