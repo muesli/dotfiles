@@ -19,6 +19,8 @@ PACKAGES=("${PACKAGES[@]}"
     "pulseaudio-alsa" "pulseaudio-zeroconf"
     # Systemd manager
     "systemdgenie"
+    # Telepathy
+    "telepathy-kde-meta"
     # Telegram client
     "telegram-desktop"
     # Access Desktop trash from CLI
