@@ -4,7 +4,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Basic utils
     "coreutils" "dnsutils" "dosfstools" "net-tools"
     # Network tools
-    "ethtool" "nmap" "nss-mdns" "openbsd-netcat" "openssh" "sshfs" "traceroute" "wol"
+    "ethtool" "nmap" "nss-mdns" "openbsd-netcat" "openssh" "prettyping" "sshfs" "traceroute" "wol"
     # Disk drive utils
     "hdparm" "smartmontools"
     # Monitors
