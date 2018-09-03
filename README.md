@@ -83,6 +83,8 @@ Configure Avahi/mDNS: https://wiki.archlinux.org/index.php/avahi
 
 Install TLP: https://wiki.archlinux.org/index.php/TLP
 
+Enable zram: https://wiki.archlinux.org/index.php/Improving_performance#Zram_or_zswap
+
 ## Configuration for Unix Platforms
 
 ### GPG
