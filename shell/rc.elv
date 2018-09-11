@@ -30,7 +30,6 @@ fn mcd [@a]{ mkdir $@a ; cd $@a }
 fn open [@a]{ xdg-open $@a }
 fn pass [@a]{ gopass $@a }
 fn cd [@dir]{ dir:cd $@dir }
-fn code [@a]{ code-oss $@a }
 
 ## Dev stuff
 ### Prettier git log
