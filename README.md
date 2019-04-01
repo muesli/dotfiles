@@ -24,6 +24,12 @@ Before you can use a bluetooth device, run:
 ./packages/arch/drivers/bluetooth.sh
 ```
 
+If you want to control Razer RGB devices, run:
+
+```
+./packages/arch/drivers/razer.sh
+```
+
 ### First Steps
 
 Add users to required groups: https://wiki.archlinux.org/index.php/users_and_groups#Group_list
