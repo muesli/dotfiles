@@ -9,16 +9,10 @@ PACKAGES=("${PACKAGES[@]}"
     "dolphin"
     # Alternative Qt-based browser
     "falkon"
-    # Document viewers / editors
-    "gwenview" "krita" "okular"
-    # Editors
-    "kate" "kwrite"
     # Calculator
     "kcalc"
     # Android integration
     "kdeconnect"
-    # Video editor
-    "kdenlive"
     # GUI dialogs for terminal apps
     "kdialog"
     # GPG manager
@@ -27,8 +21,6 @@ PACKAGES=("${PACKAGES[@]}"
     "kmail" "kontact" "korganizer" "kaddressbook"
     # Terminal apps
     "konsole" "yakuake"
-    # IRC client
-    "konversation"
     # System monitors
     "ksystemlog"
     # Manager for encrypted password wallet
@@ -37,6 +29,8 @@ PACKAGES=("${PACKAGES[@]}"
     "pavucontrol-qt" "phonon-qt5-vlc"
     # Philips Hue Plasma widget
     "plasma5-applets-hoppla-sa-git"
-    # Chakra theme
-    "plasma5-themes-chakra-heritage"
+    # Desktop utils
+    "latte-dock"
+    # GTK integration
+    "kde-gtk-config"
 )

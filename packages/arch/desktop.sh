@@ -4,7 +4,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Avahi/zeroconf
     "avahi"
     # Password management
-    "browserpass" "gopass"
+    "gopass"
     # Browsers
     "chromium" "chromium-widevine" "firefox"
     # OpenVPN
@@ -12,7 +12,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Video players
     "mpv" "vlc"
     # Extra fonts
-    "noto-fonts-emoji" "ttf-liberation"
+    "noto-fonts-emoji" "ttf-liberation" "ttf-roboto"
     # OBS
     "obs-studio" "frei0r-plugins"
     # Audio stuff
@@ -27,4 +27,14 @@ PACKAGES=("${PACKAGES[@]}"
     "trash-cli"
     # SmartCards
     "yubikey-personalization-gui"
+    # Photography
+    "digikam"
+    # Video editor
+    "kdenlive"
+    # Document viewers / editors
+    "gwenview" "krita" "okular"
+    # Editors
+    "kate" "kwrite"
+    # IRC client
+    "konversation"
 )
