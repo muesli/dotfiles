@@ -18,12 +18,6 @@ For Intel i5/i7 based machines simply run:
 ./packages/arch/drivers/intel.sh
 ```
 
-Before you can use a bluetooth device, run:
-
-```
-./packages/arch/drivers/bluetooth.sh
-```
-
 If you want to control Razer RGB devices, run:
 
 ```
@@ -39,13 +33,6 @@ Enable microcode updates: https://wiki.archlinux.org/index.php/microcode
 Install systemd-boot pacman hook: https://wiki.archlinux.org/index.php/systemd-boot#Automatically
 
 Enable SDDM: `systemctl enable sddm`
-
-Remove the Plasma Cashew:
-
-```
-wget http://vizzzion.org/stuff/emptytoolbox.plasmoid
-plasmapkg2 -t package -i emptytoolbox.plasmoid
-```
 
 ### Configuration
 
