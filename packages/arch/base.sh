@@ -4,7 +4,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Basic utils
     "coreutils" "dnsutils" "dosfstools" "net-tools"
     # Network tools
-    "ethtool" "nmap" "nss-mdns" "openbsd-netcat" "openssh" "prettyping" "sshfs" "traceroute" "wol"
+    "ethtool" "nmap" "nss-mdns" "openbsd-netcat" "openssh" "prettyping" "sshfs" "traceroute" "whois" "wol"
     # Disk drive utils
     "hdparm" "smartmontools"
     # Monitors
@@ -19,8 +19,6 @@ PACKAGES=("${PACKAGES[@]}"
     "ripgrep" "time" "tmux" "which"
     # Decompression
     "unrar" "unzip"
-    # Arch Package management
-    "yay"
     # Shell
     "zsh"
 )
