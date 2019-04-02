@@ -37,4 +37,8 @@ PACKAGES=("${PACKAGES[@]}"
     "kate" "kwrite"
     # IRC client
     "konversation"
+    # Screenshots
+    "spectacle"
+    # AppImage support
+    "libappimage"
 )
