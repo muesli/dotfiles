@@ -12,7 +12,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Video players
     "mpv" "vlc"
     # Extra fonts
-    "noto-fonts-emoji" "ttf-liberation" "ttf-roboto"
+    "noto-fonts-emoji" "ttf-liberation" "ttf-roboto" "ttf-ms-fonts"
     # OBS
     "obs-studio" "frei0r-plugins"
     # Audio stuff
