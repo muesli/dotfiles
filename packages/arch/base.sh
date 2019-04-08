@@ -3,6 +3,8 @@
 PACKAGES=("${PACKAGES[@]}"
     # Basic utils
     "coreutils" "dnsutils" "dosfstools" "net-tools"
+    # Package utils
+    "pacutils"
     # Network tools
     "ethtool" "nmap" "nss-mdns" "openbsd-netcat" "openssh" "prettyping" "sshfs" "traceroute" "whois" "wol"
     # Disk drive utils
