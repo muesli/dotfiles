@@ -21,8 +21,8 @@ PACKAGES=("${PACKAGES[@]}"
     "systemdgenie"
     # Telepathy
     "telepathy-kde-meta"
-    # Telegram client
-    "telegram-desktop"
+    # Messengers
+    "telegram-desktop" "signal-desktop-bin" "wire-desktop"
     # Access Desktop trash from CLI
     "trash-cli"
     # SmartCards
