@@ -23,4 +23,6 @@ PACKAGES=("${PACKAGES[@]}"
     "unrar" "unzip"
     # Shell
     "zsh"
+    # Docker
+    "docker" "docker-compose"
 )
