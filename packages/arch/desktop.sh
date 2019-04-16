@@ -41,4 +41,6 @@ PACKAGES=("${PACKAGES[@]}"
     "spectacle"
     # AppImage support
     "libappimage"
+    # X11 utils
+    "xclip"
 )
