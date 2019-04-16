@@ -24,6 +24,8 @@ PACKAGES=("${PACKAGES[@]}"
     "qt5-scxml"
     # CLOC (source-line counter)
     "tokei"
+    # Arduino
+    "arduino" "arduino-avr-core"
 )
 
 # To be added:
