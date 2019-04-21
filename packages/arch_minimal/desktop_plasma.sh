@@ -13,14 +13,10 @@ PACKAGES=("${PACKAGES[@]}"
     "kdialog"
     # GPG manager
     "kleopatra"
-    # Mail client / PIM
-    "kmail" "kontact" "korganizer" "kaddressbook"
     # Terminal apps
     "konsole" "yakuake"
     # System monitors
     "ksystemlog"
-    # Manager for encrypted password wallet
-    "kwalletmanager"
     # Audio / mixer
     "pavucontrol-qt" "phonon-qt5-vlc"
     # Desktop utils

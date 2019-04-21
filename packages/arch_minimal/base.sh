@@ -13,8 +13,6 @@ PACKAGES=("${PACKAGES[@]}"
     "htop" "iotop" "lsof" "ncdu"
     # Editors
     "joe" "micro-bin"
-    # Key management
-    "keybase"
     # CLI tools
     "ripgrep" "time" "tmux" "which"
     # Decompression

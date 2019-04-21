@@ -15,10 +15,8 @@ PACKAGES=("${PACKAGES[@]}"
     "ttf-liberation"
     # Audio stuff
     "pulseaudio-alsa" "pulseaudio-zeroconf"
-    # SmartCards
-    "yubikey-personalization-gui"
     # Document viewers / editors
-    "gwenview" "krita" "okular"
+    "gwenview" "okular"
     # Editors
     "kate" "kwrite"
     # IRC client
