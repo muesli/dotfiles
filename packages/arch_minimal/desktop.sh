@@ -1,8 +1,6 @@
 #!/bin/bash
 
 PACKAGES=("${PACKAGES[@]}"
-    # Avahi/zeroconf
-    "avahi"
     # Password management
     "gopass"
     # Browsers
@@ -11,8 +9,6 @@ PACKAGES=("${PACKAGES[@]}"
     "networkmanager-openvpn"
     # Video players
     "vlc"
-    # Extra fonts
-    "ttf-liberation"
     # Audio stuff
     "pulseaudio-alsa" "pulseaudio-zeroconf"
     # Document viewers / editors

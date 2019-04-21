@@ -19,8 +19,6 @@ PACKAGES=("${PACKAGES[@]}"
     "ksystemlog"
     # Audio / mixer
     "pavucontrol-qt" "phonon-qt5-vlc"
-    # Desktop utils
-    "latte-dock"
     # GTK integration
     "kde-gtk-config"
 )

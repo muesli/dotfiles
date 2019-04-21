@@ -1,8 +1,6 @@
 #!/bin/bash
 
 PACKAGES=("${PACKAGES[@]}"
-    # CMake
-    "cmake" "extra-cmake-modules"
     # SCMs
     "git"
     # Go
