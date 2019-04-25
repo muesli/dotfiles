@@ -14,7 +14,6 @@ use github.com/zzamboni/elvish-modules/dir
 #E:LANGUAGE=en_US.UTF-8
 E:LS_COLORS=[(splits "'" (dircolors | head -1))][1]
 E:GOPATH=~/Sources/go
-E:GO111MODULES=on
 E:EDITOR=micro
 E:QT_PKG_CONFIG=true
 E:PATH=~/bin:$E:GOPATH/bin:$E:PATH
