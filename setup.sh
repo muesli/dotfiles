@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#   Copyright (c) 2017-2018, Christian Muehlhaeuser <muesli@gmail.com>
+#   Copyright (c) 2017-2019, Christian Muehlhaeuser <muesli@gmail.com>
 #
 #     For license see LICENSE
 #
@@ -49,12 +49,12 @@ linkTo "shell/zshrc" "$HOME/.zshrc"
 linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
 
 # Setup git
-linkTo "git/gitconfig" "$HOME/.gitconfig"
+linkTo "configs/git/gitconfig" "$HOME/.gitconfig"
 
 # Setup joe
-linkTo "joe/joerc" "$HOME/.joerc"
+linkTo "configs/joe/joerc" "$HOME/.joerc"
 
 # Setup micro
-linkTo "micro/settings.json" "$HOME/.config/micro/settings.json"
+linkTo "configs/micro/settings.json" "$HOME/.config/micro/settings.json"
 
 cd "$pwd"

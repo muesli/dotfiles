@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#   Copyright (c) 2017, Christian Muehlhaeuser <muesli@gmail.com>
+#   Copyright (c) 2017-2019, Christian Muehlhaeuser <muesli@gmail.com>
 #
 #     For license see LICENSE
 #
@@ -22,7 +22,7 @@ else
 fi
 
 # Setup Atom
-linkTo "atom/config.cson" "$HOME/.atom/config.cson"
+linkTo "configs/atom/config.cson" "$HOME/.atom/config.cson"
 
 # Setup Code-OSS
-linkTo "code-oss/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
+linkTo "configs/code-oss/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
