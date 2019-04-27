@@ -66,6 +66,26 @@ DefaultLimitNOFILE=32768
 DefaultTasksMax=32768
 ```
 
+#### Suspend issues
+
+Should you suffer from suspend issues (like the system resuming from sleep
+immediately), this is most likely caused by the USB chipset acting up. To
+prevent that, create a new systemd unit `/etc/systemd/system/disable-usb-wakeup.service`:
+
+```
+[Unit]
+Description=Disable USB wakeup triggers in /proc/acpi/wakeup
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo XHC > /proc/acpi/wakeup"
+ExecStop=/bin/sh -c "echo XHC > /proc/acpi/wakeup"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+
 #### System Tweaks
 
 Enable smartd: https://wiki.archlinux.org/index.php/S.M.A.R.T.
