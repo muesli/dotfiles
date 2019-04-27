@@ -86,6 +86,13 @@ RemainAfterExit=yes
 WantedBy=multi-user.target
 ```
 
+Enable & start the new unit now:
+
+```
+systemctl enable disable-usb-wakeup
+systemctl start disable-usb-wakeup
+```
+
 #### System Tweaks
 
 Enable smartd: https://wiki.archlinux.org/index.php/S.M.A.R.T.
