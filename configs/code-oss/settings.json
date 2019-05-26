@@ -6,17 +6,29 @@
     "window.zoomLevel": 1,
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Monokai",
-    "files.autoSave": "onWindowChange",
     "files.insertFinalNewline": true,
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
     "go.coverageOptions": "showBothCoveredAndUncoveredCode",
-    "go.coverOnSave": true,
     "go.lintTool": "golangci-lint",
     "go.testOnSave": true,
     "go.gopath": "/home/muesli/Sources/go",
-    "go.toolsGopath": "/home/muesli/Sources/go/bin",
     "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.wrapAttributes": "aligned-multiple",
     "workbench.startupEditor": "welcomePage",
-    "terminal.integrated.shell.linux": "/home/muesli/Sources/go/bin/elvish"
+    "terminal.integrated.shell.linux": "/home/muesli/Sources/go/bin/elvish",
+    "json.format.enable": false,
+    "cmake.configureOnOpen": true,
+    "cmake.autoRestartBuild": true,
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11",
+    "window.titleBarStyle": "native",
+    "arduino.additionalUrls": [
+        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    ],
+    "C_Cpp.default.intelliSenseMode": "clang-x64",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.clang_format_style": "WebKit",
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format"
 }
