@@ -13,6 +13,8 @@ PACKAGES=("${PACKAGES[@]}"
     "mpv" "vlc"
     # Extra fonts
     "noto-fonts-emoji" "ttf-freefont" "ttf-liberation" "ttf-roboto" "ttf-ms-fonts"
+    # Foreign fonts
+    "ttf-arphic-uming" "ttf-indic-otf"
     # OBS
     "obs-studio" "frei0r-plugins"
     # Audio stuff
