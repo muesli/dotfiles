@@ -28,7 +28,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Access Desktop trash from CLI
     "trash-cli"
     # SmartCards
-    "yubikey-personalization-gui"
+    "yubikey-personalization-gui" "libu2f-host"
     # Photography
     "digikam"
     # Video editor
