@@ -18,7 +18,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Security
     "yubico-pam" "pam_beacon-git"
     # CLI tools
-    "ripgrep" "time" "tmux" "which" "imagemagick"
+    "ripgrep" "time" "tmux" "which" "imagemagick" "cht.sh"
     # Decompression
     "unrar" "unzip"
     # Shell
