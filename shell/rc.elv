@@ -22,6 +22,7 @@ E:MICRO_TRUECOLOR=1
 
 # Aliases
 fn ls [@a]{ e:ls --color=auto $@a }
+fn rm [@a]{ e:rm -I $@a }
 fn grep [@a]{ e:grep --color $@a }
 fn l [@a]{ ls -alh $@a }
 fn e [@a]{ (external $E:EDITOR) $@a }
