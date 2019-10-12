@@ -2,7 +2,7 @@
 
 PACKAGES=("${PACKAGES[@]}"
     # CAD
-    "openscad-git"
+    "openscad"
     # 3D printing
     "cura" "prusa-slicer"
 )
