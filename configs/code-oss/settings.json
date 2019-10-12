@@ -11,7 +11,6 @@
     "files.trimTrailingWhitespace": true,
     "go.coverageOptions": "showBothCoveredAndUncoveredCode",
     "go.lintTool": "golangci-lint",
-    "go.testOnSave": true,
     "go.gopath": "/home/muesli/Sources/go",
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
