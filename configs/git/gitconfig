@@ -4,3 +4,10 @@
 	signingkey = 3CF9FA45CA1EBB7E
 [push]
 	default = simple
+
+[url "https://anongit.kde.org/"]
+        insteadOf = kde:
+[url "git@git.kde.org:"]
+        pushInsteadOf = kde:
+[core]
+	quotepath = false
