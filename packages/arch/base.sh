@@ -5,6 +5,8 @@ PACKAGES=("${PACKAGES[@]}"
     "coreutils" "dnsutils" "dosfstools" "net-tools"
     # Package utils
     "pacutils"
+    # System hooks
+    "kernel-modules-hook"
     # Network tools
     "ethtool" "nmap" "nss-mdns" "openbsd-netcat" "openssh" "prettyping" "sshfs" "traceroute" "wget" "whois" "wol" "rsync"
     # Disk drive utils
