@@ -21,8 +21,5 @@ else
     echo "Error detecting distribution!"
 fi
 
-# Setup Atom
-linkTo "configs/atom/config.cson" "$HOME/.atom/config.cson"
-
 # Setup Code-OSS
 linkTo "configs/code-oss/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
