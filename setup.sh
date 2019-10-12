@@ -47,6 +47,7 @@ linkTo "shell/zshrc" "$HOME/.zshrc"
 
 # Setup elvish
 linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
+linkTo "shell/rc_private.elv" "$HOME/.elvish/lib/rc_private.elv"
 
 # Setup git
 linkTo "configs/git/gitconfig" "$HOME/.gitconfig"
