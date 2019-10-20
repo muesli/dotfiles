@@ -18,7 +18,7 @@ PACKAGES=("${PACKAGES[@]}"
     # GPG manager
     "kleopatra"
     # Mail client / PIM
-    "kmail" "kontact" "korganizer" "kaddressbook"
+    "kmail" "kontact" "korganizer" "kaddressbook" "kdepim-addons"
     # Terminal apps
     "konsole" "yakuake"
     # System monitors
