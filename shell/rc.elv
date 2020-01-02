@@ -1,4 +1,3 @@
-use narrow
 use epm
 
 # epm Deps
