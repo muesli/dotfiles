@@ -1,5 +1,13 @@
-# Apple Finder
+# File Managers
+.directory
+.Trash*
 .DS_Store
+.Spotlight-V100
+.nfs*
+._*
+Thumbs.db
+[Dd]esktop.ini
+*.lnk
 
 # Backup files
 *~
@@ -8,15 +16,25 @@
 # Temporary files
 *.swp
 
+# Logs
+*.log
+
 # Databases
 *.db
 *.sqlite
 *.sqlite3
 
-# Generated files
+# Binaries
 *.a
 *.o
 *.so
+*.dylib
+*.exe
+*.dll
+
+# Generated files
+**/build
+**/.cache
 
 ## Java
 *.class

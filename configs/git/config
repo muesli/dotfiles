@@ -11,4 +11,3 @@
         pushInsteadOf = kde:
 [core]
 	quotepath = false
-	excludesfile = /home/muesli/.gitignore_global

@@ -50,8 +50,9 @@ linkTo "shell/rc.elv" "$HOME/.elvish/rc.elv"
 linkTo "shell/rc_private.elv" "$HOME/.elvish/lib/rc_private.elv"
 
 # Setup git
-linkTo "configs/git/gitconfig" "$HOME/.gitconfig"
-linkTo "configs/git/gitignore_global" "$HOME/.gitignore_global"
+mkdir -p "$HOME/.config/git"
+linkTo "configs/git/config" "$HOME/.config/git/config"
+linkTo "configs/git/ignore" "$HOME/.config/git/ignore"
 
 # Setup joe
 linkTo "configs/joe/joerc" "$HOME/.joerc"
