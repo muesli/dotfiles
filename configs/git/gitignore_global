@@ -1,0 +1,30 @@
+# Apple Finder
+.DS_Store
+
+# Backup files
+*~
+*.bak
+
+# Temporary files
+*.swp
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated files
+*.a
+*.o
+*.so
+
+## Java
+*.class
+
+## Python
+*.py[oc]
+**/__pycache__
+
+## Javascript
+**/node_modules
+package-lock.json
