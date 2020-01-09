@@ -61,6 +61,9 @@ fn godeps [@a]{
         go list -f '{{join .Deps "\n"}}' $@a | gostatus -stdin -v
     }
 }
+fn gmo [@a]{
+    go list -u -m -json all | go-mod-outdated $@a
+}
 
 # Key bindings
 ### Alt-backspace to delete word
