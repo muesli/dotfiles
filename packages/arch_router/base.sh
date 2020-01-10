@@ -10,7 +10,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Monitors
     "htop" "iotop" "lsof" "ncdu"
     # Editors
-    "joe" "micro-bin"
+    "joe" "micro-git"
     # CLI tools
     "ripgrep" "time" "tmux" "which"
     # Decompression
