@@ -27,6 +27,7 @@ which yay >/dev/null || installYay
 # Install packages
 PACKAGES=()
 source "$DIR/base.sh"
+source "$DIR/network.sh"
 source "$DIR/dev.sh"
 source "$DIR/xorg.sh"
 source "$DIR/desktop.sh"
