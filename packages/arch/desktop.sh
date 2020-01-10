@@ -24,7 +24,7 @@ PACKAGES=("${PACKAGES[@]}"
     # Telepathy
     "telepathy-kde-meta"
     # Messengers
-    "telegram-desktop" "signal-desktop-bin" "wire-desktop"
+    "telegram-desktop" "signal-desktop" "wire-desktop"
     # Access Desktop trash from CLI
     "trash-cli"
     # SmartCards
