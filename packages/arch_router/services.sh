@@ -5,4 +5,8 @@ PACKAGES=("${PACKAGES[@]}"
     "influxdb"
     # Grafana
     "grafana-bin"
+    # MQTT
+    "mosquitto"
+    # mqttbridge
+    "python-influxdb" "python-paho-mqtt"
 )
