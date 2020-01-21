@@ -28,6 +28,7 @@ which yay >/dev/null || installYay
 PACKAGES=()
 source "$DIR/base.sh"
 source "$DIR/network.sh"
+source "$DIR/services.sh"
 source "$DIR/dev.sh"
 
 yay -S --needed ${PACKAGES[@]}
