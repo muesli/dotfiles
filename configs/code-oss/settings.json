@@ -24,11 +24,13 @@
     "cmake.autoRestartBuild": true,
     "C_Cpp.default.cppStandard": "c++17",
     "C_Cpp.default.cStandard": "c11",
-    "arduino.additionalUrls": [
-        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
-    ],
     "C_Cpp.default.intelliSenseMode": "clang-x64",
     "C_Cpp.clang_format_sortIncludes": true,
     "C_Cpp.clang_format_style": "WebKit",
-    "C_Cpp.clang_format_path": "/usr/bin/clang-format"
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "arduino.additionalUrls": [
+        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    ],
+    "arduino.defaultBaudRate": 921600,
+    "arduino.path": "/usr/bin/"
 }
