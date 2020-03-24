@@ -28,6 +28,12 @@
     "C_Cpp.clang_format_sortIncludes": true,
     "C_Cpp.clang_format_style": "WebKit",
     "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "C_Cpp.formatting": "Disabled",
+    "C_Cpp.includePath": [
+        "/usr/include/**",
+        "/usr/include/KF5/**",
+        "/usr/include/qt/**"
+    ],
     "arduino.additionalUrls": [
         "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
     ],
