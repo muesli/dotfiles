@@ -18,7 +18,7 @@
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
     "html.format.wrapAttributes": "aligned-multiple",
-    "terminal.integrated.shell.linux": "/home/muesli/Sources/go/bin/elvish",
+    "terminal.integrated.shell.linux": "/usr/bin/elvish",
     "json.format.enable": false,
     "cmake.configureOnOpen": true,
     "cmake.autoRestartBuild": true,
@@ -41,5 +41,8 @@
     "arduino.path": "/usr/bin/",
     "liveshare.increasedGuestLimit": false,
     "liveshare.focusBehavior": "prompt",
-    "liveshare.guestApprovalRequired": true
+    "liveshare.guestApprovalRequired": true,
+    "peacock.vslsJoinColor": "#42b883",
+    "go.formatTool": "goimports",
+    "terminal.enableAppInsights": false
 }
