@@ -37,7 +37,7 @@ fn glog [@a]{
     git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all $@a
 }
 ### Find path and cd to
-fn gh [@a]{
+fn gcd [@a]{
     if (== (count $a) 0) {
         cd $E:GOPATH/src/github.com/muesli
     } else {
