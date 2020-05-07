@@ -62,7 +62,7 @@ fn godeps [@a]{
     }
 }
 fn gmo [@a]{
-    go list -u -m -json all | go-mod-outdated $@a
+    go list -u -m -json all | go-mod-outdated -direct -update $@a
 }
 
 # Key bindings
