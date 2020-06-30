@@ -23,3 +23,6 @@ fi
 
 # Setup Code-OSS
 linkTo "configs/code-oss/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
+
+# Setup libinput-gestures
+linkTo "configs/libinput-gestures/libinput-gestures.conf" "$HOME/.config/libinput-gestures/libinput-gestures.conf"
