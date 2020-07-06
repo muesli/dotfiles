@@ -95,8 +95,8 @@ use github.com/zzamboni/elvish-completions/git
 
 # Prompt
 use github.com/muesli/elvish-libs/theme/powerline
-edit:prompt-stale-transform = $all~
-edit:rprompt-stale-transform = $all~
+edit:prompt-stale-transform = [x]{ put $x }
+edit:rprompt-stale-transform = [x]{ put $x }
 
 # Dir modes
 #dir:init
