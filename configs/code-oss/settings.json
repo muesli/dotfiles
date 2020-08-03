@@ -44,5 +44,7 @@
     "liveshare.guestApprovalRequired": true,
     "peacock.vslsJoinColor": "#42b883",
     "go.formatTool": "goimports",
-    "terminal.enableAppInsights": false
+    "terminal.enableAppInsights": false,
+    "go.useLanguageServer": true,
+    "liveshare.autoShareTerminals": false
 }
