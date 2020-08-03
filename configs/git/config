@@ -11,3 +11,5 @@
         pushInsteadOf = kde:
 [core]
 	quotepath = false
+[color]
+	ui = true
