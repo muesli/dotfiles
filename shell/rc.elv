@@ -1,9 +1,9 @@
 use epm
 
 # epm Deps
-epm:install &silent-if-installed=$true \
-    github.com/muesli/elvish-libs \
-    github.com/zzamboni/elvish-completions \
+epm:install &silent-if-installed=$true ^
+    github.com/muesli/elvish-libs ^
+    github.com/zzamboni/elvish-completions ^
     github.com/zzamboni/elvish-modules
 
 use github.com/zzamboni/elvish-modules/dir
@@ -11,7 +11,7 @@ use github.com/zzamboni/elvish-modules/dir
 # ENV vars
 #E:LANG=en_US.UTF-8
 #E:LANGUAGE=en_US.UTF-8
-E:LS_COLORS=[(splits "'" (dircolors | head -1))][1]
+#E:LS_COLORS=[(split "'" (dircolors | head -1))][1]
 E:GOPATH=~/Sources/go
 E:EDITOR=micro
 E:QT_PKG_CONFIG=true
