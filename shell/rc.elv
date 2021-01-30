@@ -12,12 +12,12 @@ use github.com/zzamboni/elvish-modules/dir
 #E:LANG=en_US.UTF-8
 #E:LANGUAGE=en_US.UTF-8
 #E:LS_COLORS=[(split "'" (dircolors | head -1))][1]
-E:GOPATH=~/Sources/go
-E:EDITOR=micro
-E:QT_PKG_CONFIG=true
-E:PATH=~/bin:$E:PATH
-E:SSH_AUTH_SOCK=$E:XDG_RUNTIME_DIR/gnupg/S.gpg-agent.ssh
-E:MICRO_TRUECOLOR=1
+set E:GOPATH = ~/Sources/go
+set E:EDITOR = micro
+set E:QT_PKG_CONFIG = true
+set E:PATH = ~/bin:$E:PATH
+set E:SSH_AUTH_SOCK = $E:XDG_RUNTIME_DIR/gnupg/S.gpg-agent.ssh
+set E:MICRO_TRUECOLOR = 1
 
 # Aliases
 fn ls [@a]{ e:ls --color=auto $@a }
@@ -67,17 +67,17 @@ fn gmo [@a]{
 
 # Key bindings
 ### Alt-backspace to delete word
-edit:insert:binding[Alt+Backspace]=$edit:kill-small-word-left~
+set edit:insert:binding[Alt+Backspace] = $edit:kill-small-word-left~
 ### Alt-d to delete the word under the cursor
 #edit:insert:binding[Alt-d] = { edit:move-dot-right-word; edit:kill-word-left }
 
-edit:insert:binding[Ctrl+Left]=$edit:move-dot-left-small-word~
-edit:insert:binding[Ctrl+Right]=$edit:move-dot-right-small-word~
-edit:insert:binding[Ctrl+A]=$edit:move-dot-sol~
-edit:insert:binding[Ctrl+E]=$edit:move-dot-eol~
-edit:insert:binding[Ctrl+L]={ clear > /dev/tty; edit:redraw &full=$true }
-edit:insert:binding[Ctrl+P]=$edit:location:start~
-edit:insert:binding[Alt+Up]={ dir:cd .. }
+set edit:insert:binding[Ctrl+Left] = $edit:move-dot-left-small-word~
+set edit:insert:binding[Ctrl+Right] = $edit:move-dot-right-small-word~
+set edit:insert:binding[Ctrl+A] = $edit:move-dot-sol~
+set edit:insert:binding[Ctrl+E] = $edit:move-dot-eol~
+set edit:insert:binding[Ctrl+L] = { clear > /dev/tty; edit:redraw &full=$true }
+set edit:insert:binding[Ctrl+P] = $edit:location:start~
+set edit:insert:binding[Alt+Up] = { dir:cd .. }
 
 ### vim nav bindings
 #edit:navigation:binding[h]=$edit:nav:&left
@@ -86,7 +86,7 @@ edit:insert:binding[Alt+Up]={ dir:cd .. }
 #edit:navigation:binding[k]=$edit:nav:&up
 
 ### surpress warning when at end of history
-edit:insert:binding[Down]={ }
+set edit:insert:binding[Down] = { }
 
 # Completions
 #edit:completer['']={ e:bash ~/.elvish/get-completion.bash $@args }
