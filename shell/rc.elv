@@ -104,5 +104,8 @@ edit:insert:binding[Alt-Left] = $dir:left-word-or-prev-dir~
 edit:insert:binding[Alt-Right] = $dir:right-word-or-next-dir~
 edit:insert:binding[Ctrl+/] = $dir:history-chooser~
 
+# direnv
+use direnv
+
 # Private ENV stuff
-use rc_private
+# use rc_private

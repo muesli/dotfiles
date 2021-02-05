@@ -47,3 +47,6 @@ Thumbs.db
 
 ## Javascript
 **/node_modules
+
+# env
+.envrc
